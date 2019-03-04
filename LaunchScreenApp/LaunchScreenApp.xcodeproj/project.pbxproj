@@ -7,27 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4822CC3A222C747900660057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4822CC39222C747900660057 /* AppDelegate.swift */; };
-		4822CC3C222C747900660057 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4822CC3B222C747900660057 /* ViewController.swift */; };
-		4822CC3F222C747900660057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4822CC3D222C747900660057 /* Main.storyboard */; };
-		4822CC41222C747A00660057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4822CC40222C747A00660057 /* Assets.xcassets */; };
-		4822CC44222C747A00660057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4822CC42222C747A00660057 /* LaunchScreen.storyboard */; };
-		4822CC4C222C8BFE00660057 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4822CC4B222C8BFE00660057 /* SecondViewController.swift */; };
+		48B85187222CAA8A000C3E1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B85186222CAA8A000C3E1E /* AppDelegate.swift */; };
+		48B85189222CAA8A000C3E1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B85188222CAA8A000C3E1E /* ViewController.swift */; };
+		48B8518C222CAA8A000C3E1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B8518A222CAA8A000C3E1E /* Main.storyboard */; };
+		48B8518E222CAA8C000C3E1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48B8518D222CAA8C000C3E1E /* Assets.xcassets */; };
+		48B85191222CAA8C000C3E1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B8518F222CAA8C000C3E1E /* LaunchScreen.storyboard */; };
+		48B85199222CAB90000C3E1E /* Lineage_OS_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B85198222CAB90000C3E1E /* Lineage_OS_Logo.png */; };
+		48B8519B222CABC3000C3E1E /* WordPress-logotype-alternative-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B8519A222CABC2000C3E1E /* WordPress-logotype-alternative-white.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4822CC36222C747900660057 /* Segue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Segue.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4822CC39222C747900660057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4822CC3B222C747900660057 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4822CC3E222C747900660057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4822CC40222C747A00660057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4822CC43222C747A00660057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4822CC45222C747A00660057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4822CC4B222C8BFE00660057 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		48B85183222CAA8A000C3E1E /* LaunchScreenApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaunchScreenApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		48B85186222CAA8A000C3E1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		48B85188222CAA8A000C3E1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		48B8518B222CAA8A000C3E1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48B8518D222CAA8C000C3E1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48B85190222CAA8C000C3E1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		48B85192222CAA8C000C3E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48B85198222CAB90000C3E1E /* Lineage_OS_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Lineage_OS_Logo.png; path = ../../../Downloads/Lineage_OS_Logo.png; sourceTree = "<group>"; };
+		48B8519A222CABC2000C3E1E /* WordPress-logotype-alternative-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "WordPress-logotype-alternative-white.png"; path = "../../../Downloads/WordPress-logotype-alternative-white.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4822CC33222C747900660057 /* Frameworks */ = {
+		48B85180222CAA8A000C3E1E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +39,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4822CC2D222C747900660057 = {
+		48B8517A222CAA8A000C3E1E = {
 			isa = PBXGroup;
 			children = (
-				4822CC38222C747900660057 /* Segue */,
-				4822CC37222C747900660057 /* Products */,
+				48B85185222CAA8A000C3E1E /* LaunchScreenApp */,
+				48B85184222CAA8A000C3E1E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		4822CC37222C747900660057 /* Products */ = {
+		48B85184222CAA8A000C3E1E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4822CC36222C747900660057 /* Segue.app */,
+				48B85183222CAA8A000C3E1E /* LaunchScreenApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4822CC38222C747900660057 /* Segue */ = {
+		48B85185222CAA8A000C3E1E /* LaunchScreenApp */ = {
 			isa = PBXGroup;
 			children = (
-				4822CC39222C747900660057 /* AppDelegate.swift */,
-				4822CC3B222C747900660057 /* ViewController.swift */,
-				4822CC3D222C747900660057 /* Main.storyboard */,
-				4822CC4B222C8BFE00660057 /* SecondViewController.swift */,
-				4822CC40222C747A00660057 /* Assets.xcassets */,
-				4822CC42222C747A00660057 /* LaunchScreen.storyboard */,
-				4822CC45222C747A00660057 /* Info.plist */,
+				48B8519A222CABC2000C3E1E /* WordPress-logotype-alternative-white.png */,
+				48B85198222CAB90000C3E1E /* Lineage_OS_Logo.png */,
+				48B85186222CAA8A000C3E1E /* AppDelegate.swift */,
+				48B85188222CAA8A000C3E1E /* ViewController.swift */,
+				48B8518A222CAA8A000C3E1E /* Main.storyboard */,
+				48B8518D222CAA8C000C3E1E /* Assets.xcassets */,
+				48B8518F222CAA8C000C3E1E /* LaunchScreen.storyboard */,
+				48B85192222CAA8C000C3E1E /* Info.plist */,
 			);
-			path = Segue;
+			path = LaunchScreenApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4822CC35222C747900660057 /* Segue */ = {
+		48B85182222CAA8A000C3E1E /* LaunchScreenApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4822CC48222C747A00660057 /* Build configuration list for PBXNativeTarget "Segue" */;
+			buildConfigurationList = 48B85195222CAA8C000C3E1E /* Build configuration list for PBXNativeTarget "LaunchScreenApp" */;
 			buildPhases = (
-				4822CC32222C747900660057 /* Sources */,
-				4822CC33222C747900660057 /* Frameworks */,
-				4822CC34222C747900660057 /* Resources */,
+				48B8517F222CAA8A000C3E1E /* Sources */,
+				48B85180222CAA8A000C3E1E /* Frameworks */,
+				48B85181222CAA8A000C3E1E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Segue;
-			productName = Segue;
-			productReference = 4822CC36222C747900660057 /* Segue.app */;
+			name = LaunchScreenApp;
+			productName = LaunchScreenApp;
+			productReference = 48B85183222CAA8A000C3E1E /* LaunchScreenApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		4822CC2E222C747900660057 /* Project object */ = {
+		48B8517B222CAA8A000C3E1E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Yusuf ali cezik";
 				TargetAttributes = {
-					4822CC35222C747900660057 = {
+					48B85182222CAA8A000C3E1E = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 4822CC31222C747900660057 /* Build configuration list for PBXProject "Segue" */;
+			buildConfigurationList = 48B8517E222CAA8A000C3E1E /* Build configuration list for PBXProject "LaunchScreenApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 4822CC2D222C747900660057;
-			productRefGroup = 4822CC37222C747900660057 /* Products */;
+			mainGroup = 48B8517A222CAA8A000C3E1E;
+			productRefGroup = 48B85184222CAA8A000C3E1E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4822CC35222C747900660057 /* Segue */,
+				48B85182222CAA8A000C3E1E /* LaunchScreenApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4822CC34222C747900660057 /* Resources */ = {
+		48B85181222CAA8A000C3E1E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4822CC44222C747A00660057 /* LaunchScreen.storyboard in Resources */,
-				4822CC41222C747A00660057 /* Assets.xcassets in Resources */,
-				4822CC3F222C747900660057 /* Main.storyboard in Resources */,
+				48B85199222CAB90000C3E1E /* Lineage_OS_Logo.png in Resources */,
+				48B85191222CAA8C000C3E1E /* LaunchScreen.storyboard in Resources */,
+				48B8518E222CAA8C000C3E1E /* Assets.xcassets in Resources */,
+				48B8518C222CAA8A000C3E1E /* Main.storyboard in Resources */,
+				48B8519B222CABC3000C3E1E /* WordPress-logotype-alternative-white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4822CC32222C747900660057 /* Sources */ = {
+		48B8517F222CAA8A000C3E1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4822CC4C222C8BFE00660057 /* SecondViewController.swift in Sources */,
-				4822CC3C222C747900660057 /* ViewController.swift in Sources */,
-				4822CC3A222C747900660057 /* AppDelegate.swift in Sources */,
+				48B85189222CAA8A000C3E1E /* ViewController.swift in Sources */,
+				48B85187222CAA8A000C3E1E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4822CC3D222C747900660057 /* Main.storyboard */ = {
+		48B8518A222CAA8A000C3E1E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4822CC3E222C747900660057 /* Base */,
+				48B8518B222CAA8A000C3E1E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		4822CC42222C747A00660057 /* LaunchScreen.storyboard */ = {
+		48B8518F222CAA8C000C3E1E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4822CC43222C747A00660057 /* Base */,
+				48B85190222CAA8C000C3E1E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		4822CC46222C747A00660057 /* Debug */ = {
+		48B85193222CAA8C000C3E1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -227,7 +231,7 @@
 			};
 			name = Debug;
 		};
-		4822CC47222C747A00660057 /* Release */ = {
+		48B85194222CAA8C000C3E1E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -282,34 +286,34 @@
 			};
 			name = Release;
 		};
-		4822CC49222C747A00660057 /* Debug */ = {
+		48B85196222CAA8C000C3E1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Segue/Info.plist;
+				INFOPLIST_FILE = LaunchScreenApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yusufali.Segue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yusufali.LaunchScreenApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		4822CC4A222C747A00660057 /* Release */ = {
+		48B85197222CAA8C000C3E1E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Segue/Info.plist;
+				INFOPLIST_FILE = LaunchScreenApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yusufali.Segue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yusufali.LaunchScreenApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,25 +323,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4822CC31222C747900660057 /* Build configuration list for PBXProject "Segue" */ = {
+		48B8517E222CAA8A000C3E1E /* Build configuration list for PBXProject "LaunchScreenApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4822CC46222C747A00660057 /* Debug */,
-				4822CC47222C747A00660057 /* Release */,
+				48B85193222CAA8C000C3E1E /* Debug */,
+				48B85194222CAA8C000C3E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4822CC48222C747A00660057 /* Build configuration list for PBXNativeTarget "Segue" */ = {
+		48B85195222CAA8C000C3E1E /* Build configuration list for PBXNativeTarget "LaunchScreenApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4822CC49222C747A00660057 /* Debug */,
-				4822CC4A222C747A00660057 /* Release */,
+				48B85196222CAA8C000C3E1E /* Debug */,
+				48B85197222CAA8C000C3E1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 4822CC2E222C747900660057 /* Project object */;
+	rootObject = 48B8517B222CAA8A000C3E1E /* Project object */;
 }
