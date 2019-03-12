@@ -22,6 +22,7 @@ class DetailsVC: UIViewController {
        
         nameLabel.text=familyKarakter.isim
         meslekLabel.text=familyKarakter.meslek
+        imageView.image=familyKarakter.resim
         
     }
     

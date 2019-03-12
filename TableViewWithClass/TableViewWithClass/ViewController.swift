@@ -24,23 +24,23 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         let meg=FamilyKarakter()
         meg.isim="Meg"
         meg.meslek="Öğrenci"
-       // meg.resim=UIImage(named: "meg.png")!
+        meg.resim=UIImage(named: "meg.png")!
         
         let brian=FamilyKarakter()
         brian.isim="Brian"
         brian.meslek="Köpek"
-       // brian.resim=UIImage(named: "brian.png")!
+        brian.resim=UIImage(named: "brian.png")!
         
         let stewie=FamilyKarakter()
         stewie.isim="Stewie"
         stewie.meslek="Bebek"
-       // stewie.resim=UIImage(named: "stewie.png")!
+        stewie.resim=UIImage(named: "stewie.jpg")!
         
         
         let peter=FamilyKarakter()
         peter.isim="Peter"
         peter.meslek="Fabrika işçisi"
-        // stewie.resim=UIImage(named: "peter.png")!
+        peter.resim=UIImage(named: "peter.png")!
       
         
         FamilyGuys.append(meg)
@@ -64,6 +64,8 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         secilenFamilyKarakter.isim=FamilyGuys[indexPath.row].isim
         secilenFamilyKarakter.meslek=FamilyGuys[indexPath.row].meslek
+        secilenFamilyKarakter.resim=FamilyGuys[indexPath.row].resim
+        
         
         self.performSegue(withIdentifier: "toDetailsVC", sender: nil)
         

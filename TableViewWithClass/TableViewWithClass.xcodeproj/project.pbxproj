@@ -14,6 +14,11 @@
 		4832BED72235EE7900FC7D25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4832BED52235EE7900FC7D25 /* LaunchScreen.storyboard */; };
 		4832BEDF2235F73600FC7D25 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4832BEDE2235F73600FC7D25 /* DetailsVC.swift */; };
 		4832BEF12235FE6200FC7D25 /* FamilyKarakter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4832BEF02235FE6200FC7D25 /* FamilyKarakter.swift */; };
+		4832BEF72237125500FC7D25 /* meg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832BEF22237125500FC7D25 /* meg.png */; };
+		4832BEF82237125500FC7D25 /* brian.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832BEF32237125500FC7D25 /* brian.png */; };
+		4832BEF92237125500FC7D25 /* peter.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832BEF42237125500FC7D25 /* peter.png */; };
+		4832BEFA2237125500FC7D25 /* quagmire.png in Resources */ = {isa = PBXBuildFile; fileRef = 4832BEF52237125500FC7D25 /* quagmire.png */; };
+		4832BEFB2237125500FC7D25 /* stewie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4832BEF62237125500FC7D25 /* stewie.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,12 +30,12 @@
 		4832BED62235EE7900FC7D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4832BED82235EE7900FC7D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4832BEDE2235F73600FC7D25 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
-		4832BEEB2235FE1A00FC7D25 /* quagmire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quagmire.png; sourceTree = "<group>"; };
-		4832BEEC2235FE1A00FC7D25 /* stewie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stewie.jpg; sourceTree = "<group>"; };
-		4832BEED2235FE1A00FC7D25 /* peter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = peter.png; sourceTree = "<group>"; };
-		4832BEEE2235FE1A00FC7D25 /* brian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brian.png; sourceTree = "<group>"; };
-		4832BEEF2235FE1A00FC7D25 /* meg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meg.png; sourceTree = "<group>"; };
 		4832BEF02235FE6200FC7D25 /* FamilyKarakter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyKarakter.swift; sourceTree = "<group>"; };
+		4832BEF22237125500FC7D25 /* meg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = meg.png; path = ../../../../.Trash/meg.png; sourceTree = "<group>"; };
+		4832BEF32237125500FC7D25 /* brian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = brian.png; path = ../../../../.Trash/brian.png; sourceTree = "<group>"; };
+		4832BEF42237125500FC7D25 /* peter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = peter.png; path = ../../../../.Trash/peter.png; sourceTree = "<group>"; };
+		4832BEF52237125500FC7D25 /* quagmire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = quagmire.png; path = ../../../../.Trash/quagmire.png; sourceTree = "<group>"; };
+		4832BEF62237125500FC7D25 /* stewie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = stewie.jpg; path = ../../../../.Trash/stewie.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +68,6 @@
 		4832BECB2235EE7800FC7D25 /* TableViewWithClass */ = {
 			isa = PBXGroup;
 			children = (
-				4832BEEE2235FE1A00FC7D25 /* brian.png */,
-				4832BEEF2235FE1A00FC7D25 /* meg.png */,
-				4832BEED2235FE1A00FC7D25 /* peter.png */,
-				4832BEEB2235FE1A00FC7D25 /* quagmire.png */,
-				4832BEEC2235FE1A00FC7D25 /* stewie.jpg */,
 				4832BEEA2235FE1A00FC7D25 /* images */,
 				4832BECC2235EE7800FC7D25 /* AppDelegate.swift */,
 				4832BECE2235EE7800FC7D25 /* ViewController.swift */,
@@ -84,6 +84,11 @@
 		4832BEEA2235FE1A00FC7D25 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				4832BEF32237125500FC7D25 /* brian.png */,
+				4832BEF22237125500FC7D25 /* meg.png */,
+				4832BEF42237125500FC7D25 /* peter.png */,
+				4832BEF52237125500FC7D25 /* quagmire.png */,
+				4832BEF62237125500FC7D25 /* stewie.jpg */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -148,7 +153,12 @@
 			files = (
 				4832BED72235EE7900FC7D25 /* LaunchScreen.storyboard in Resources */,
 				4832BED42235EE7900FC7D25 /* Assets.xcassets in Resources */,
+				4832BEFB2237125500FC7D25 /* stewie.jpg in Resources */,
+				4832BEF92237125500FC7D25 /* peter.png in Resources */,
 				4832BED22235EE7800FC7D25 /* Main.storyboard in Resources */,
+				4832BEF82237125500FC7D25 /* brian.png in Resources */,
+				4832BEFA2237125500FC7D25 /* quagmire.png in Resources */,
+				4832BEF72237125500FC7D25 /* meg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
