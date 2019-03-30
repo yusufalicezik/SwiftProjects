@@ -18,8 +18,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var tableView: UITableView!
     
     let BASE_URL="https://jsonplaceholder.typicode.com/photos"
-    var tumPhotos=[PhotosModel]()
-    var pics=[UIImage]()
+    var tumFotolar=[PhotosModel]()
     var secilenItem=PhotosModel()
     
    override func viewDidLoad() {
@@ -36,9 +35,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
                 let gelenVeri:JSON=JSON(response.result.value!)
                 //print(gelenVeri) //verilerimizi json olarak çektik.(hepsini string şekilde)
                 self.verileriParcala(json:gelenVeri)
-                //
-                
-                
             }else {
                 print("error \(String(describing: response.result.error))")
             }
@@ -62,25 +58,19 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             model.title=title
             model.url=url
            
-            tumPhotos.append(model)
+            tumFotolar.append(model)
             
             
         }
         
         bannerTanimla()
-        
         tableView.reloadData()
-        
-        
-        
-       
-        
         
     }
     
     func bannerTanimla(){
-        //first index banner
-        Alamofire.request(tumPhotos[0].url).responseImage {
+        //first index en üstteki resim bu yüzden 0. indisi aldım
+        Alamofire.request(tumFotolar[0].url).responseImage {
             response in
             if let image=response.result.value {
                 self.imgBanner.image=image
@@ -91,14 +81,15 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tumPhotos.count
+        return tumFotolar.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell=tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ViewControllerTableViewCell
+        //custom cell im
+        let cell=tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as!  ViewControllerTableViewCell
         
         let tempModel:PhotosModel
-        tempModel=tumPhotos[indexPath.row]
+        tempModel=tumFotolar[indexPath.row]
         
         cell.label.text=tempModel.title
         Alamofire.request(tempModel.thumbnailUrl).responseImage {
@@ -111,14 +102,23 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         return cell
         
     }
+    
+    //tabloda herhangi bir item a tıklandığında;
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        secilenItem.id=tumPhotos[indexPath.row].id
-        secilenItem.url=tumPhotos[indexPath.row].url
+        secilenItem.id=tumFotolar[indexPath.row].id //secilen item ın id sini ve
+        secilenItem.url=tumFotolar[indexPath.row].url //resmin url ini aldım. SecondController a göndereceğim
+        //o da bu id ye göre comments in body sini getirecek.
+        secilenItem.thumbnailUrl=tumFotolar[indexPath.row].thumbnailUrl
+        
+        secilenItem.title=tumFotolar[indexPath.row].title
+        
         performSegue(withIdentifier: "goToSecondController", sender: self)
     }
     
     
+    
+    //SecondViewController a gitmeden önce ordaki değişkenlerin atamasını yaptım.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier=="goToSecondController"){
             
@@ -126,6 +126,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
             destinationVC.id=secilenItem.id
             destinationVC.imgUrl=secilenItem.url
+            destinationVC.baslik=secilenItem.title
+            destinationVC.profilUrl=secilenItem.thumbnailUrl
             
         }
     }
