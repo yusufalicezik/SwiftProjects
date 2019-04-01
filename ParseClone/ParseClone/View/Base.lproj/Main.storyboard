@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ParseClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rectanglearkaplan" translatesAutoresizingMaskIntoConstraints="NO" id="E1m-sf-szF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="819"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="E1m-sf-szF" secondAttribute="height" multiplier="375:734" id="TSC-pV-byn"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Molecule ApplogoYazi" translatesAutoresizingMaskIntoConstraints="NO" id="yUh-AT-jik">
+                                <rect key="frame" x="116" y="23" width="143" height="77"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moleculelogo" translatesAutoresizingMaskIntoConstraints="NO" id="SCT-KY-skG">
+                                <rect key="frame" x="42" y="115" width="285" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="285" id="JLE-Eu-J10"/>
+                                    <constraint firstAttribute="height" constant="150" id="qep-Xo-SlF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Groupkart" translatesAutoresizingMaskIntoConstraints="NO" id="h86-kO-DXk">
+                                <rect key="frame" x="42" y="293" width="296" height="303"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="303" id="6jK-C5-gwZ"/>
+                                    <constraint firstAttribute="width" constant="296" id="XzJ-at-Mjo"/>
+                                    <constraint firstAttribute="width" secondItem="h86-kO-DXk" secondAttribute="height" multiplier="296:303" id="kMo-WT-j5I"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Giriş YapgirisYazi" translatesAutoresizingMaskIntoConstraints="NO" id="Uht-n2-q2y">
+                                <rect key="frame" x="142" y="331" width="96" height="38"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path 3kisaCizgi" translatesAutoresizingMaskIntoConstraints="NO" id="Z4u-DD-VKA">
+                                <rect key="frame" x="110" y="390" width="164" height="3"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UnV-0d-CXH" customClass="LoginTextField" customModule="ParseClone" customModuleProvider="target">
+                                <rect key="frame" x="67" y="413" width="245" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="tJe-m8-EGG"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3y-5k-mgT" customClass="LoginTextField" customModule="ParseClone" customModuleProvider="target">
+                                <rect key="frame" x="67" y="438" width="245" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="oML-CK-z0W"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCH-hd-1DX">
+                                <rect key="frame" x="142" y="479" width="96" height="30"/>
+                                <state key="normal" title="Giriş"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path 3uzunCizgi" translatesAutoresizingMaskIntoConstraints="NO" id="A5d-eC-NHS">
+                                <rect key="frame" x="67" y="377" width="250" height="3"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SCT-KY-skG" firstAttribute="top" secondItem="yUh-AT-jik" secondAttribute="bottom" constant="15" id="1fF-wn-zSb"/>
+                            <constraint firstItem="h86-kO-DXk" firstAttribute="top" secondItem="Uht-n2-q2y" secondAttribute="bottom" constant="-76" id="3fc-jj-GGi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z4u-DD-VKA" secondAttribute="trailing" constant="101" id="70r-r1-1Gf"/>
+                            <constraint firstItem="J3y-5k-mgT" firstAttribute="top" secondItem="UnV-0d-CXH" secondAttribute="bottom" constant="8" id="8X3-hh-LgC"/>
+                            <constraint firstItem="Z4u-DD-VKA" firstAttribute="top" secondItem="A5d-eC-NHS" secondAttribute="bottom" constant="10" id="AGh-7O-qTx"/>
+                            <constraint firstItem="Uht-n2-q2y" firstAttribute="leading" relation="lessThanOrEqual" secondItem="h86-kO-DXk" secondAttribute="trailing" constant="-196" id="Fvv-Y9-o1H"/>
+                            <constraint firstItem="Z4u-DD-VKA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="HTQ-rn-2G6"/>
+                            <constraint firstItem="A5d-eC-NHS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="KmS-gi-rLs"/>
+                            <constraint firstItem="h86-kO-DXk" firstAttribute="top" secondItem="Uht-n2-q2y" secondAttribute="bottom" constant="-76" id="L0b-Xu-Vz0"/>
+                            <constraint firstItem="E1m-sf-szF" firstAttribute="top" secondItem="yUh-AT-jik" secondAttribute="bottom" constant="-80" id="MgZ-Eo-xfn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SCT-KY-skG" secondAttribute="trailing" constant="48" id="NF5-hk-cmV"/>
+                            <constraint firstItem="cCH-hd-1DX" firstAttribute="top" secondItem="J3y-5k-mgT" secondAttribute="bottom" constant="24" id="NXF-gz-foR"/>
+                            <constraint firstItem="h86-kO-DXk" firstAttribute="top" secondItem="SCT-KY-skG" secondAttribute="bottom" constant="28" id="OVM-Es-L8Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A5d-eC-NHS" secondAttribute="trailing" constant="58" id="P9s-I5-uiu"/>
+                            <constraint firstItem="h86-kO-DXk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="Pa9-VR-hAc"/>
+                            <constraint firstItem="UnV-0d-CXH" firstAttribute="top" secondItem="Z4u-DD-VKA" secondAttribute="bottom" constant="20" id="RSU-24-RuT"/>
+                            <constraint firstItem="A5d-eC-NHS" firstAttribute="top" secondItem="Uht-n2-q2y" secondAttribute="bottom" constant="8" id="RUK-tw-43a"/>
+                            <constraint firstItem="cCH-hd-1DX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="Wh1-77-BGA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uht-n2-q2y" secondAttribute="trailing" constant="137" id="Xp3-56-8Oa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yUh-AT-jik" secondAttribute="trailing" constant="116" id="cYM-4R-6Xx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UnV-0d-CXH" secondAttribute="trailing" constant="63" id="dlC-V1-bcP"/>
+                            <constraint firstItem="E1m-sf-szF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e8A-dS-mia"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J3y-5k-mgT" secondAttribute="trailing" constant="63" id="fL1-Mc-Cxw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="h86-kO-DXk" secondAttribute="trailing" constant="37" id="iuh-mL-k9Z"/>
+                            <constraint firstItem="SCT-KY-skG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="lNK-T8-xZq"/>
+                            <constraint firstItem="J3y-5k-mgT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="ncJ-Up-4he"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E1m-sf-szF" secondAttribute="trailing" id="pz3-hf-Zck"/>
+                            <constraint firstItem="UnV-0d-CXH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="sbd-9r-Z8M"/>
+                            <constraint firstItem="E1m-sf-szF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="thG-fM-Ho0"/>
+                            <constraint firstItem="E1m-sf-szF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uj7-1B-fw1"/>
+                            <constraint firstItem="Uht-n2-q2y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="w58-cd-pCJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E1m-sf-szF" secondAttribute="bottom" id="xe2-Ib-U5Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cCH-hd-1DX" secondAttribute="trailing" constant="137" id="yPt-wz-9Dh"/>
+                            <constraint firstItem="yUh-AT-jik" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="ynk-fW-UxL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.00492610837438"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Giriş YapgirisYazi" width="125" height="38"/>
+        <image name="Groupkart" width="295" height="303"/>
+        <image name="Molecule ApplogoYazi" width="128" height="77"/>
+        <image name="Path 3kisaCizgi" width="176" height="3"/>
+        <image name="Path 3uzunCizgi" width="243" height="3"/>
+        <image name="Rectanglearkaplan" width="373" height="743"/>
+        <image name="moleculelogo" width="205" height="205"/>
+    </resources>
+</document>
