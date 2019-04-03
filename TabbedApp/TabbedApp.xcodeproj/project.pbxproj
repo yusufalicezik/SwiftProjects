@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		485C8BDD22551CB8005BDE07 /* TabbedApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 485C8BDB22551CB8005BDE07 /* TabbedApp.xcdatamodeld */; };
 		4877188E2252531800145CD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4877188D2252531800145CD2 /* AppDelegate.swift */; };
 		487718902252531800145CD2 /* AnasayfaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4877188F2252531800145CD2 /* AnasayfaViewController.swift */; };
 		487718922252531800145CD2 /* PostEkleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487718912252531800145CD2 /* PostEkleViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		0B58040F8C35DE8DC040E415 /* Pods-TabbedApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbedApp.release.xcconfig"; path = "Target Support Files/Pods-TabbedApp/Pods-TabbedApp.release.xcconfig"; sourceTree = "<group>"; };
 		24336813C0792C8BFBB8FE21 /* Pods-TabbedApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TabbedApp.debug.xcconfig"; path = "Target Support Files/Pods-TabbedApp/Pods-TabbedApp.debug.xcconfig"; sourceTree = "<group>"; };
+		485C8BDC22551CB8005BDE07 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		4877188A2252531800145CD2 /* TabbedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabbedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4877188D2252531800145CD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4877188F2252531800145CD2 /* AnasayfaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				4877188D2252531800145CD2 /* AppDelegate.swift */,
+				485C8BDB22551CB8005BDE07 /* TabbedApp.xcdatamodeld */,
 				487718A122525A7300145CD2 /* SignInViewController.swift */,
 				4877188F2252531800145CD2 /* AnasayfaViewController.swift */,
 				487718912252531800145CD2 /* PostEkleViewController.swift */,
@@ -225,6 +228,7 @@
 				487718A222525A7300145CD2 /* SignInViewController.swift in Sources */,
 				487718A422539BA600145CD2 /* FeedCell.swift in Sources */,
 				487718922252531800145CD2 /* PostEkleViewController.swift in Sources */,
+				485C8BDD22551CB8005BDE07 /* TabbedApp.xcdatamodeld in Sources */,
 				487718A622539E3F00145CD2 /* Post.swift in Sources */,
 				4877188E2252531800145CD2 /* AppDelegate.swift in Sources */,
 				487718902252531800145CD2 /* AnasayfaViewController.swift in Sources */,
@@ -427,6 +431,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		485C8BDB22551CB8005BDE07 /* TabbedApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				485C8BDC22551CB8005BDE07 /* Model.xcdatamodel */,
+			);
+			currentVersion = 485C8BDC22551CB8005BDE07 /* Model.xcdatamodel */;
+			path = TabbedApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 487718822252531800145CD2 /* Project object */;
 }

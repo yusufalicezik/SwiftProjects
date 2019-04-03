@@ -8,9 +8,13 @@
 
 import UIKit
 import Parse
+import CoreData
+import CoreLocation
 
 class AnasayfaViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-  
+    
+    
+
     var postArray=[Post]()
     
 
@@ -24,6 +28,8 @@ class AnasayfaViewController: UIViewController,UITableViewDelegate,UITableViewDa
         tableView.dataSource=self
         
         verileriGetir()
+        
+     
         
     }
     

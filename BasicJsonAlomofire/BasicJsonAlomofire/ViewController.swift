@@ -24,11 +24,23 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
    override func viewDidLoad() {
         super.viewDidLoad()
         verileriCek()
+    
     }
     
     
     func verileriCek(){
-        Alamofire.request(BASE_URL, method: .get).responseJSON {
+      
+        /*let p=["key":123]
+        Alamofire.request(BASE_URL, method: .get, parameters: p).responseJSON {
+            response in if response.result.isSuccess{
+                
+            }
+            
+        }
+        */
+     
+        
+        Alamofire.request(BASE_URL ,method: .get).responseJSON {
             response in if response.result.isSuccess {
                 print("basarili")
                 //

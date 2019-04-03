@@ -26,6 +26,10 @@ class FeedCell: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBAction func commentClicked(_ sender: Any) {
+        
+      
+        
+        
         let commentObject=PFObject(className:"Comments")
         commentObject["from"]=PFUser.current()?.username
         commentObject["to"]=uuidLabel.text

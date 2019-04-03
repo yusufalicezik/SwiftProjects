@@ -106,6 +106,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="SMp-RY-3hi" secondAttribute="bottom" id="CTu-Ys-Vge"/>
                             <constraint firstItem="SMp-RY-3hi" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="bkB-zF-2Eh"/>
@@ -113,6 +114,9 @@
                             <constraint firstItem="SMp-RY-3hi" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="utr-Mh-5Hk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="UKB-e9-gH2" appends="YES" id="0kV-Hc-fkL"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="mOO-fF-8Kp">
                         <barButtonItem key="rightBarButtonItem" title="Çıkış Yap" id="byb-bj-L7X">
@@ -126,6 +130,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="UKB-e9-gH2"/>
             </objects>
             <point key="canvasLocation" x="2100" y="-326.08695652173918"/>
         </scene>
