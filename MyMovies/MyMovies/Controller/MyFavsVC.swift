@@ -119,11 +119,12 @@ class MyFavsVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         movieArray.append(movie)
       
-        if sonMu{
+        if movieArray.count == idArray.count{ //farklı thredde çektiği için film boyutuna göre bazen
+            //bazı filmler geç çekilebiliyor, 3 film varsa bazen hepsini bazen 1,2 tanesini çekip
+            //tabloyu yeniliyordu, ama benim film sayım, id sayıma eşit olmadan listemi yenileme dedim;
             tableView.reloadData()
-            print("ysfalic",movieArray.count)
-            
         }
+        
         
         
     }
