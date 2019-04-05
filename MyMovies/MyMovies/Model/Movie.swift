@@ -17,4 +17,5 @@ class Movie {
     var detailImage:String?
     var releaseDate:String?
     var genresName:String?
+    var movieTypeArray=[String]()
 }

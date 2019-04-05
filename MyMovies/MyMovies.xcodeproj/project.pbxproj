@@ -17,6 +17,10 @@
 		485C8C0022552BB8005BDE07 /* MyFavModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 485C8BFE22552BB8005BDE07 /* MyFavModel.xcdatamodeld */; };
 		485C8C0622552F22005BDE07 /* TopRatedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485C8C0522552F22005BDE07 /* TopRatedCell.swift */; };
 		485C8C08225538F3005BDE07 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485C8C07225538F3005BDE07 /* Movie.swift */; };
+		48C829D422560FC7009763D7 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C829D322560FC7009763D7 /* SearchVC.swift */; };
+		48C829D622561000009763D7 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C829D522561000009763D7 /* SearchCell.swift */; };
+		48C829DA22562700009763D7 /* SearchGenresCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C829D922562700009763D7 /* SearchGenresCollectionViewCell.swift */; };
+		48C829DC22569A5F009763D7 /* MyFavsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C829DB22569A5F009763D7 /* MyFavsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		485C8BFF22552BB8005BDE07 /* MyFavModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyFavModel.xcdatamodel; sourceTree = "<group>"; };
 		485C8C0522552F22005BDE07 /* TopRatedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedCell.swift; sourceTree = "<group>"; };
 		485C8C07225538F3005BDE07 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		48C829D322560FC7009763D7 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		48C829D522561000009763D7 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		48C829D922562700009763D7 /* SearchGenresCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGenresCollectionViewCell.swift; sourceTree = "<group>"; };
+		48C829DB22569A5F009763D7 /* MyFavsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavsVC.swift; sourceTree = "<group>"; };
 		B4FEB61BE027C8B8D39CE4D4 /* Pods-MyMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMovies.release.xcconfig"; path = "Target Support Files/Pods-MyMovies/Pods-MyMovies.release.xcconfig"; sourceTree = "<group>"; };
 		D2DF4C6C247E6DA3A3D73461 /* Pods_MyMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,8 +125,10 @@
 		485C8C0322552C09005BDE07 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				48C829D322560FC7009763D7 /* SearchVC.swift */,
 				485C8BEC2255258A005BDE07 /* TopRatedVC.swift */,
 				485C8BEE2255258A005BDE07 /* MovieDetailsVC.swift */,
+				48C829DB22569A5F009763D7 /* MyFavsVC.swift */,
 				485C8C0422552F02005BDE07 /* CustomCells */,
 			);
 			path = Controller;
@@ -128,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				485C8C0522552F22005BDE07 /* TopRatedCell.swift */,
+				48C829D522561000009763D7 /* SearchCell.swift */,
+				48C829D922562700009763D7 /* SearchGenresCollectionViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -259,11 +271,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				485C8BEF2255258A005BDE07 /* MovieDetailsVC.swift in Sources */,
+				48C829DA22562700009763D7 /* SearchGenresCollectionViewCell.swift in Sources */,
+				48C829D622561000009763D7 /* SearchCell.swift in Sources */,
 				485C8BEB2255258A005BDE07 /* AppDelegate.swift in Sources */,
+				48C829DC22569A5F009763D7 /* MyFavsVC.swift in Sources */,
 				485C8C08225538F3005BDE07 /* Movie.swift in Sources */,
 				485C8BED2255258A005BDE07 /* TopRatedVC.swift in Sources */,
 				485C8C0622552F22005BDE07 /* TopRatedCell.swift in Sources */,
 				485C8C0022552BB8005BDE07 /* MyFavModel.xcdatamodeld in Sources */,
+				48C829D422560FC7009763D7 /* SearchVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

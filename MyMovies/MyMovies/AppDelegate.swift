@@ -89,6 +89,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    
+    func alerOlustur(_ messageTitle:String, _ messageBody:String){
+        let alert=UIAlertController(title: messageTitle, message: messageBody ,preferredStyle: UIAlertController.Style.alert)
+        let okButon=UIAlertAction(title: "Tamam", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(okButon)
+        UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+        
+    }
 
 }
 

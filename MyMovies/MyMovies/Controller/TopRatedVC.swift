@@ -128,6 +128,11 @@ class TopRatedVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         selectedID=movieArray[indexPath.row].id
         performSegue(withIdentifier: "toDetailsVC", sender: nil)
     }
+    
+    
+   
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
          globalID=selectedID

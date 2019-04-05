@@ -60,7 +60,6 @@ class MovieDetailsVC: UIViewController {
         }
     }
     
-    
     func verileriParcala(json:JSON){
        
             let title=json["title"].stringValue
@@ -68,6 +67,7 @@ class MovieDetailsVC: UIViewController {
             let overView=json["overview"].stringValue
             let releaseDate=json["release_date"].stringValue
         var names=""
+        if json["genres"].count > 0 {
         for i in 0...json["genres"].count-1{
             if i == 0{
                 names+=json["genres"][i]["name"].stringValue
@@ -75,6 +75,7 @@ class MovieDetailsVC: UIViewController {
                 names+=", "+json["genres"][i]["name"].stringValue
             }
             
+        }
         }
         
         selectedMovie.title=title
