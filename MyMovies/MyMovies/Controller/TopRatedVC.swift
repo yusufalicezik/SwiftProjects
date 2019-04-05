@@ -98,6 +98,8 @@ class TopRatedVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     func verileriParcala(json:JSON){
        movieArray.removeAll(keepingCapacity: false)
         //result ın içinde gezmemiz gerek
+       if json["results"].count > 0 {
+        
         for i in 0...json["results"].count-1{
             let title=String(i+1)+"."+json["results"][i]["title"].stringValue
             let image=json["results"][i]["backdrop_path"].stringValue
@@ -120,9 +122,10 @@ class TopRatedVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
             movieArray.append(movie)
         }
 
-       tableView.reloadData()
-
+        tableView.reloadData()
     }
+
+}
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedID=movieArray[indexPath.row].id
