@@ -10,29 +10,32 @@ import UIKit
 import AlamofireImage
 import Alamofire
 import SwiftyJSON
-
-class DiscoverCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource {
+var g=false
+var year:Int=0
+class DiscoverCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource{
 
     
     let BASE_URL="https://api.themoviedb.org/3"
     let API_KEY:String="ae32fbb3535e8e640aff557640da5021"
     let LANGUAGE="tr-TR"
     let DISCOVER_URL="/discover/movie"
-    var parameters:[String:String]?
+    var parameters:[String:Any]?
     var genreIdArray=[String]()
     var genreNameArray=[String]()
     let PHOTO_URL="https://image.tmdb.org/t/p/w500"
     //with_genres
     
+    var secilenId:String?
+   
     
-    
+    @IBOutlet weak var label: UILabel!
     @IBOutlet weak var categoryNameLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var categoryIDLabel: UILabel!
+    var delegate: CustomCellDelegate?
     
-    //ya da tıkladığımda movieArray[indpath.row] daki id yi selected id olarak yollarım. bu olur
-    //burda collectiondaki movie name in altına gizli id ekleriz yine.
-    //tıkladığında detaylara gidecek ve o id ye göre tıklanılan filmi seçecek.
+    //segment 2 olduğunda buranın global değişkenini değiştirebiliriz.
+    //sorgulama yaparken primary_release_year e 2019 vs eklenir
     
     var movieArray=[Movie]()
     
@@ -46,9 +49,16 @@ class DiscoverCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDat
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
+        
+       label.layer.borderWidth = 0
+       label.layer.masksToBounds = false
+       
+       label.layer.cornerRadius = label.frame.width/25
+       label.clipsToBounds = true
 
         if categoryIDLabel.text != nil && categoryIDLabel.text != "" && categoryIDLabel.text != " "{
-        parameters=["api_key":API_KEY, "language":LANGUAGE, "with_genres":categoryIDLabel.text!]
+            parameters=["api_key":API_KEY, "language":LANGUAGE, "with_genres":categoryIDLabel.text!,"primary_release_year":year]
             filmleriCek()
         }
         
@@ -121,6 +131,25 @@ class DiscoverCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDat
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("tiklandi")
+        secilenId=movieArray[indexPath.row].id
+        
+        globalID=secilenId
+    
+        // performSegue(withIdentifier: "toDetailsVC", sender: nil)
+        g=false
+         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "goto"), object: nil)
+        
+      delegate?.didTapAnyButton("asd")
+        
+    }
+ 
+    
+    
+    
+    
     
 }
 

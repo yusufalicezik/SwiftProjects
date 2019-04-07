@@ -34,6 +34,8 @@ class DiscoverVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
         tableView.dataSource=self
         parameters=["api_key":API_KEY, "language":LANGUAGE]
         verileriCek()
+        
+        print("oyk",segmentControl.selectedSegmentIndex)
 
     }
     
@@ -76,11 +78,47 @@ class DiscoverVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
         let cell=tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DiscoverCell
         cell.categoryNameLabel.text=genreNameArray[indexPath.row]
         cell.categoryIDLabel.text=genreIdArray[indexPath.row]
+        
+        cell.delegate=self
        
         return cell
     }
+    override func viewWillAppear(_ animated: Bool) {
+        if !g {
+         NotificationCenter.default.addObserver(self, selector: #selector(DiscoverVC.d), name:
+            NSNotification.Name(rawValue: "gotoo"), object: nil)
+            
+        }else{
+            
+        }
+    }
     
-
+    @objc func d(){
+        g=true
+        performSegue(withIdentifier: "toDetailsVC", sender: nil)
+    }
+    
+    
    
-
+  
+    
+   /* @IBAction func segClicked(_ sender: Any) {
+        switch segmentControl.selectedSegmentIndex
+        {
+        case 0:
+            year=2019
+            verileriCek()
+        case 1:
+            year=0
+            verileriCek()
+        default:
+            break
+        }
+    }
+ */
+}
+extension DiscoverVC: CustomCellDelegate {
+    func didTapAnyButton(_ anyParam: String) {
+        performSegue(withIdentifier: "toDetailsVC", sender: nil)
+}
 }

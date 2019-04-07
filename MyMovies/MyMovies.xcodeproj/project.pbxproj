@@ -25,6 +25,7 @@
 		48C829E22257A5FE009763D7 /* DiscoverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C829E12257A5FE009763D7 /* DiscoverVC.swift */; };
 		48C829E52257A88E009763D7 /* DiscoverCustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C829E42257A88E009763D7 /* DiscoverCustomLabel.swift */; };
 		48C829E82257B746009763D7 /* DiscoverFilmCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C829E72257B746009763D7 /* DiscoverFilmCollectionCell.swift */; };
+		48DFBA2E2258D8340022AF48 /* CustomCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DFBA2D2258D8340022AF48 /* CustomCellDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		48C829E12257A5FE009763D7 /* DiscoverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverVC.swift; sourceTree = "<group>"; };
 		48C829E42257A88E009763D7 /* DiscoverCustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverCustomLabel.swift; sourceTree = "<group>"; };
 		48C829E72257B746009763D7 /* DiscoverFilmCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverFilmCollectionCell.swift; sourceTree = "<group>"; };
+		48DFBA2D2258D8340022AF48 /* CustomCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellDelegate.swift; sourceTree = "<group>"; };
 		B4FEB61BE027C8B8D39CE4D4 /* Pods-MyMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMovies.release.xcconfig"; path = "Target Support Files/Pods-MyMovies/Pods-MyMovies.release.xcconfig"; sourceTree = "<group>"; };
 		D2DF4C6C247E6DA3A3D73461 /* Pods_MyMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				48C829E42257A88E009763D7 /* DiscoverCustomLabel.swift */,
+				48DFBA2D2258D8340022AF48 /* CustomCellDelegate.swift */,
 			);
 			path = CustomComp;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				48C829DC22569A5F009763D7 /* MyFavsVC.swift in Sources */,
 				485C8C08225538F3005BDE07 /* Movie.swift in Sources */,
 				485C8BED2255258A005BDE07 /* TopRatedVC.swift in Sources */,
+				48DFBA2E2258D8340022AF48 /* CustomCellDelegate.swift in Sources */,
 				485C8C0622552F22005BDE07 /* TopRatedCell.swift in Sources */,
 				485C8C0022552BB8005BDE07 /* MyFavModel.xcdatamodeld in Sources */,
 				48C829D422560FC7009763D7 /* SearchVC.swift in Sources */,
