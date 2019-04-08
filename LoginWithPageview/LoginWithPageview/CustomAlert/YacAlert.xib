@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YacAlert" customModule="LoginWithPageview" customModuleProvider="target">
+            <connections>
+                <outlet property="alertView" destination="pZ4-TA-Bd5" id="qui-mV-ERF"/>
+                <outlet property="imgView" destination="ItV-D4-hgb" id="4Qo-gY-7YC"/>
+                <outlet property="title" destination="aJn-vL-ewf" id="5h2-ir-PG9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pZ4-TA-Bd5">
+                    <rect key="frame" x="59" y="199" width="256" height="269"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJn-vL-ewf">
+                            <rect key="frame" x="8" y="87" width="240" height="94"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="94" id="Axk-O7-fwX"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="sZx-WE-aDl"/>
+                                <constraint firstAttribute="width" constant="240" id="w6A-Vw-dVv"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.27185586090000002" green="0.61180609460000002" blue="0.38589417929999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJJ-hE-ThG">
+                            <rect key="frame" x="8" y="231" width="240" height="30"/>
+                            <color key="backgroundColor" red="0.27185586094856262" green="0.61180609464645386" blue="0.38589417934417725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="240" id="9Fn-zr-qDe"/>
+                                <constraint firstAttribute="height" constant="30" id="gxU-VA-R4P"/>
+                            </constraints>
+                            <state key="normal" title="Tamam">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="tamamButonClicked:" destination="-1" eventType="touchUpInside" id="c71-F3-pIb"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moleculelogo" translatesAutoresizingMaskIntoConstraints="NO" id="ItV-D4-hgb">
+                            <rect key="frame" x="93" y="-31" width="70" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="S8F-Sz-aP4"/>
+                                <constraint firstAttribute="height" constant="60" id="SWY-xo-7LY"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="256" id="1kU-Cr-Ehn"/>
+                        <constraint firstAttribute="height" constant="269" id="26d-hb-fhF"/>
+                        <constraint firstItem="aJn-vL-ewf" firstAttribute="top" secondItem="ItV-D4-hgb" secondAttribute="bottom" constant="58" id="90V-NP-c36"/>
+                        <constraint firstItem="ItV-D4-hgb" firstAttribute="centerX" secondItem="pZ4-TA-Bd5" secondAttribute="centerX" id="Bsy-DV-jNh"/>
+                        <constraint firstItem="ItV-D4-hgb" firstAttribute="leading" secondItem="pZ4-TA-Bd5" secondAttribute="leading" constant="93" id="Ets-3p-ThA"/>
+                        <constraint firstAttribute="trailing" secondItem="aJn-vL-ewf" secondAttribute="trailing" constant="8" id="FH0-ku-1zd"/>
+                        <constraint firstItem="aJn-vL-ewf" firstAttribute="centerX" secondItem="pZ4-TA-Bd5" secondAttribute="centerX" id="PgC-1b-D3H"/>
+                        <constraint firstItem="YJJ-hE-ThG" firstAttribute="leading" secondItem="pZ4-TA-Bd5" secondAttribute="leading" constant="8" id="Qzl-kL-gyW"/>
+                        <constraint firstItem="ItV-D4-hgb" firstAttribute="top" secondItem="pZ4-TA-Bd5" secondAttribute="top" constant="-31" id="cxc-De-vSA"/>
+                        <constraint firstItem="aJn-vL-ewf" firstAttribute="leading" secondItem="pZ4-TA-Bd5" secondAttribute="leading" constant="8" id="fsi-pk-ULM"/>
+                        <constraint firstAttribute="trailing" secondItem="ItV-D4-hgb" secondAttribute="trailing" constant="93" id="hje-CZ-e5B"/>
+                        <constraint firstAttribute="trailing" secondItem="YJJ-hE-ThG" secondAttribute="trailing" constant="8" id="i0y-fg-lA1"/>
+                        <constraint firstItem="YJJ-hE-ThG" firstAttribute="centerX" secondItem="pZ4-TA-Bd5" secondAttribute="centerX" id="tDP-eU-Uka"/>
+                        <constraint firstItem="YJJ-hE-ThG" firstAttribute="top" secondItem="aJn-vL-ewf" secondAttribute="bottom" constant="50" id="wdi-0y-hpl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.4324436865482234" green="0.4324436865482234" blue="0.4324436865482234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="pZ4-TA-Bd5" secondAttribute="bottom" constant="199" id="2Gl-QR-Xgx"/>
+                <constraint firstItem="pZ4-TA-Bd5" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Hfh-lb-hoX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pZ4-TA-Bd5" secondAttribute="trailing" constant="60" id="W3d-Lg-yQi"/>
+                <constraint firstItem="pZ4-TA-Bd5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="179" id="aTE-hx-dvl"/>
+                <constraint firstItem="pZ4-TA-Bd5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="59" id="vi3-XU-hZs"/>
+                <constraint firstItem="pZ4-TA-Bd5" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="wa1-Hn-Xae"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="moleculelogo" width="205" height="205"/>
+    </resources>
+</document>
