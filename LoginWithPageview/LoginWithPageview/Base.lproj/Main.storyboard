@@ -84,6 +84,9 @@
                                     <action selector="butonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0u2-b7-V0e"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="udU-dy-wgN">
+                                <rect key="frame" x="0.0" y="251" width="375" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.46805599619999999" green="0.1007182226" blue="0.096336145050000002" alpha="0.79722281679999996" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -95,7 +98,10 @@
                             <constraint firstItem="KBb-iK-tCY" firstAttribute="top" secondItem="QG0-8w-yZH" secondAttribute="bottom" constant="78" id="Led-iE-wff"/>
                             <constraint firstItem="QG0-8w-yZH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TzS-OB-ZMm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KBb-iK-tCY" secondAttribute="trailing" constant="41" id="afD-OL-0Vx"/>
+                            <constraint firstItem="udU-dy-wgN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="231" id="dME-HI-5bJ"/>
                             <constraint firstItem="QG0-8w-yZH" firstAttribute="trailing" secondItem="wvH-fF-PLY" secondAttribute="trailing" id="h5b-bV-3eh"/>
+                            <constraint firstItem="udU-dy-wgN" firstAttribute="leading" secondItem="wvH-fF-PLY" secondAttribute="leading" id="les-wl-824"/>
+                            <constraint firstItem="udU-dy-wgN" firstAttribute="trailing" secondItem="wvH-fF-PLY" secondAttribute="trailing" id="mSA-M9-bgT"/>
                             <constraint firstAttribute="trailing" secondItem="QG0-8w-yZH" secondAttribute="trailing" id="r1v-64-nFz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -103,6 +109,7 @@
                     <connections>
                         <outlet property="collectionView" destination="QG0-8w-yZH" id="Cfh-hl-6Lo"/>
                         <outlet property="pageControl" destination="wvH-fF-PLY" id="NRC-IZ-grV"/>
+                        <outlet property="pickerView" destination="udU-dy-wgN" id="Tla-9P-GO9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

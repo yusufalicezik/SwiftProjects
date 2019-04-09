@@ -8,11 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
+class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
+ 
    
-    var titleArray=["Hoş Geldiniz", "WApp Nedir?","Başlarken"]
-    var messageArray=["App hakkında daha fazla bildi almak için lütfen kaydırın.", "Bu app ile sosyal medyada istediğin gibi gezebilir, paylaşımlar yapabilir, beğenip yorum yapabilir ve takipçilerin ile dilediğin gibi mesajlaşabilirsin.","Başlamak için son kez kaydır ve wApp'e kayıt ol."]
+    var titleArray=[",", "WApp Nedir?","Başlarken"]
+    var messageArray=[",", "Bu app ile sosyal medyada istediğin gibi gezebilir, paylaşımlar yapabilir, beğenip yorum yapabilir ve takipçilerin ile dilediğin gibi mesajlaşabilirsin.","Başlamak için son kez kaydır ve wApp'e kayıt ol."]
     
+    
+    var tempArray=["Emre Yaman", "Rıdvan Kabak", "Yusuf Ali Çezik", "Can Yardımcı", "Hasan Cerit"]
+    
+    @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     override func viewDidLoad() {
@@ -21,8 +26,30 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         collectionView.dataSource=self
         pageControl.numberOfPages=titleArray.count
         
+        pickerView.delegate=self
+        pickerView.dataSource=self
+        
+       
+        
      
     }
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return tempArray.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return tempArray[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print(tempArray[row] + "Seçildi")
+    }
+    
+    
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
      return titleArray.count
