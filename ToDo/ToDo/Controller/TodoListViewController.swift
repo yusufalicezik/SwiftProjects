@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TodoListViewController: UITableViewController {
+class TodoListViewController: UITableViewController{
 
     var itemArray=[Item]()
     

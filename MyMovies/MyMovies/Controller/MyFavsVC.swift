@@ -36,10 +36,11 @@ class MyFavsVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         tableView.delegate=self
         tableView.dataSource=self
         parameters=["api_key":API_KEY, "language":LANGUAGE] as? [String : String]
-        
+       
         
  
     }
+    
     
     @objc func kaydedilenFilmIdleriniCek(){
         idArray.removeAll(keepingCapacity: false)
@@ -220,6 +221,9 @@ class MyFavsVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         */
         //eğer bi yenileme olmuşsa verileri silip tekrar çekecek.
         kaydedilenFilmIdleriniCek()
+        
+        //
+          self.tabBarController?.tabBar.frame = CGRect(x: 0, y: UIApplication.shared.statusBarFrame.size.height ,width: (self.tabBarController?.tabBar.frame.size.width)!, height: (self.tabBarController?.tabBar.frame.size.height)!)
     }
     
     
