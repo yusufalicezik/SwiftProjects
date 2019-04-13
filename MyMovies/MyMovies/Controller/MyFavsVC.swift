@@ -223,7 +223,11 @@ class MyFavsVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         kaydedilenFilmIdleriniCek()
         
         //
+        /*
           self.tabBarController?.tabBar.frame = CGRect(x: 0, y: UIApplication.shared.statusBarFrame.size.height ,width: (self.tabBarController?.tabBar.frame.size.width)!, height: (self.tabBarController?.tabBar.frame.size.height)!)
+ 
+         
+         */
     }
     
     

@@ -7,8 +7,9 @@
 //
 
 import UIKit
-import SwiftyJSON
+
 import Alamofire
+import SwiftyJSON
 
 
 var globalID:String?

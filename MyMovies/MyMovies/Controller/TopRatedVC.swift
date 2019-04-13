@@ -36,7 +36,7 @@ class TopRatedVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         tableView.delegate=self
         tableView.dataSource=self
 
-        self.tabBarController?.tabBar.frame = CGRect(x: 0, y:  (self.navigationController?.navigationBar.frame.height)! + UIApplication.shared.statusBarFrame.size.height ,width: (self.tabBarController?.tabBar.frame.size.width)!, height: (self.tabBarController?.tabBar.frame.size.height)!)
+  
 
         verileriCek()
         
@@ -143,10 +143,12 @@ class TopRatedVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
          globalID=selectedID
         
     }
-    
+   
+    /*
     override func viewWillAppear(_ animated: Bool) {
+       
         self.tabBarController?.tabBar.frame = CGRect(x: 0, y: UIApplication.shared.statusBarFrame.size.height + (self.navigationController?.navigationBar.frame.height)! ,width: (self.tabBarController?.tabBar.frame.size.width)!, height: (self.tabBarController?.tabBar.frame.size.height)!)
     }
-    
+    */
 
 }
