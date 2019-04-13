@@ -25,7 +25,7 @@ class TodoListViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         //sqllite ile v.tabanını açabilmemiz için dosya yolu gerekli. Bunu almak için; library supporting files
-        //print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
     }
     
