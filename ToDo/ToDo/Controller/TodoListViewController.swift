@@ -7,72 +7,99 @@
 //
 
 import UIKit
-import CoreData
+import RealmSwift
+import SwipeCellKit
+import ChameleonFramework
 
-class TodoListViewController: UITableViewController{
-
-    var itemArray=[Item]()
+class TodoListViewController: UITableViewController, SwipeTableViewCellDelegate{
+   
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    var itemArray:Results<Item>?
+    let realm = try! Realm()
     var selectedCategory:Category? {
         didSet{
-            loadItems()
+           loadItems()
         }
     }
     
-    let defaults=UserDefaults.standard
-    
-    let context=(UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         //sqllite ile v.tabanını açabilmemiz için dosya yolu gerekli. Bunu almak için; library supporting files
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
+
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        searchBar.barTintColor = UIColor(hexString : selectedCategory!.color)
+        tableView.separatorStyle = .none
+        tableView.rowHeight = 60.0
+        
+        
+        //nav color; background dersek hepsinde uygulanır..
+        navigationController?.navigationBar.barTintColor = UIColor(hexString : selectedCategory!.color)
+        navigationController?.navigationBar.tintColor=ContrastColorOf(UIColor(hexString: selectedCategory!.color)!, returnFlat: true)
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : ContrastColorOf(UIColor(hexString: selectedCategory!.color)!, returnFlat: true)]
+        
+        title = selectedCategory?.name
     }
     
     //MARK: - Tableview datasource methods
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemArray.count
+        return itemArray?.count ?? 1
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell=tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
+        let cell=tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath) as! SwipeTableViewCell
         
         
-        cell.textLabel?.text=itemArray[indexPath.row].title
         
-        /*if itemArray[indexPath.row].done == true {
-            cell.accessoryType = .checkmark
+        
+        if let item = itemArray?[indexPath.row]{
+            cell.textLabel?.text=item.title
+            cell.accessoryType = item.done ? .checkmark : .none
+            if let color = UIColor(hexString: selectedCategory!.color)?.darken(byPercentage:
+                //current item numarası / toplam item
+                CGFloat(indexPath.row) /  CGFloat(itemArray!.count) / 2.45){
+                
+                cell.backgroundColor = color
+                //arka plan rengine göre yazı türü belirlenir, renk gitgide açılır/kapanır
+                cell.textLabel?.textColor = ContrastColorOf(color, returnFlat: true)
+            }
+                    
+                
+            
+            
+            
         }else{
-            cell.accessoryType = .none
-         }*///yerine aşağıdaki;
-        cell.accessoryType = itemArray[indexPath.row].done ? .checkmark : .none
+            cell.textLabel?.text="Herhangi bir görev yok"
+        }
+        
+    cell.delegate=self
         
         return cell
     }
     
     //MARK: - Tableview delegate methods
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
-      /*  if itemArray[indexPath.row].done==true{
-            itemArray[indexPath.row].done=false
-        }else{
-            itemArray[indexPath.row].done=true
+       tableView.deselectRow(at: indexPath, animated: true)
+        if let item = itemArray?[indexPath.row]{
+            do{
+                 try realm.write {
+                        item.done = !item.done
+                 }
+            }catch{
+                print("error")
+                    
+            }
         }
-         *///yerine aşağıdaki;
-        itemArray[indexPath.row].done = !itemArray[indexPath.row].done
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-        saveItems()
-        
-        
-        //silmek için;
-        /*
-         context.delete(itemArray[indexPath.row]) önce bu silinir, daha sonra itemArrayden remove edilir, index
-         sırası kaymaması İÇİN
-         itemArray.remove(indexPath.row)
-         
-         saveItems()
-         */
+     
+      
+        tableView.reloadData()
+      
         
     }
 
@@ -86,14 +113,25 @@ class TodoListViewController: UITableViewController{
         let action=UIAlertAction(title:"Ekle", style: UIAlertAction.Style.default) { (action) in
             //ekleye tıklanınca ne olacak?
             if textField.text != nil && textField.text != "" {
-                let item=Item(context: self.context)
-                item.title=textField.text!
-                item.done=false
-                item.parentCategory=self.selectedCategory
-               self.itemArray.append(item)
-                self.saveItems()
-               
-            }
+                
+                
+                    if let currentCategory = self.selectedCategory { //kategorinin listesine ekledik görevi
+                        do{
+                        try self.realm.write {
+                            let item=Item()
+                            item.title=textField.text!
+                            currentCategory.items.append(item)
+                            self.realm.add(item)
+                            
+                            }
+                        }catch{
+                            print("error")
+                        }
+                        
+                    }
+               }
+            
+            self.tableView.reloadData()
            
             
             }
@@ -117,32 +155,15 @@ class TodoListViewController: UITableViewController{
         
         self.present(alert, animated: true, completion: nil)
     }
-    
-    func saveItems(){
-        do{
-            try context.save()
-            print("saved")
-            tableView.reloadData()
-        }catch{
-            print("error while saving")
-        }
-    }
-    
+ 
+
+ 
+
     //default olarak Item.feth.. verdik, eğer request parametresi gelmezse/göndermezsek/boş gönderirsek diye
-    func loadItems(request:NSFetchRequest<Item>=Item.fetchRequest(),predicate:NSPredicate?=nil){
-        
-        let parentPredicate=NSPredicate(format: "parentCategory.name MATCHES %@", (selectedCategory?.name!)!)
-        if let additionalPredicate=predicate{
-            request.predicate=NSCompoundPredicate(andPredicateWithSubpredicates: [additionalPredicate,parentPredicate])
-        }else{
-            request.predicate=parentPredicate
-        }
-       
-        
-        do{
-           itemArray = try context.fetch(request)
-            tableView.reloadData()
-        }catch{}
+      func loadItems(){
+  
+      itemArray = selectedCategory?.items.sorted(byKeyPath: "title", ascending: true) //gelen kategorinin items larını sıraladık.
+      tableView.reloadData()
     }
     
     
@@ -150,23 +171,16 @@ class TodoListViewController: UITableViewController{
     
 }
 
+
 //MARK: - Search bar extension
 extension TodoListViewController : UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         
         if searchBar.text != nil && searchBar.text != ""{
-        
-        let request : NSFetchRequest<Item> = Item.fetchRequest()
-        
-        //Query yazmak için ; //cd büyük küçük harf duyarlılığını ortadan kaldırır.
-        let predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
-        
-        
-        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
-        request.sortDescriptors=[sortDescriptor]
-        
-            loadItems(request: request,predicate:predicate)
+            itemArray=itemArray?.filter("title CONTAINS[cd] %@ ", searchBar.text!).sorted(byKeyPath: "title", ascending: true)
+            tableView.reloadData()
+       
         }
         else{
           self.loadItems()
@@ -179,24 +193,49 @@ extension TodoListViewController : UISearchBarDelegate{
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchBar.text != nil && searchBar.text != ""{
-            
-            let request : NSFetchRequest<Item> = Item.fetchRequest()
-            
-            //Query yazmak için ; //cd büyük küçük harf duyarlılığını ortadan kaldırır.
-            let predicate = NSPredicate(format: "title CONTAINS[cd] %@", searchBar.text!)
-            
-            request.predicate=predicate
-            
-            let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
-            request.sortDescriptors=[sortDescriptor]
-            
-            loadItems(request: request)
+            itemArray=itemArray?.filter("title CONTAINS[cd] %@ ", searchBar.text!).sorted(byKeyPath: "title", ascending: true)
+            tableView.reloadData()
+          
         }
         else{
             self.loadItems()
         }
         
         
+    }
+    
+    
+    ///MARK: - SWİPE
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else { return nil }
+        
+        let deleteAction = SwipeAction(style: .destructive, title: "Sil") { action, indexPath in
+            // kaydıktan sonra silme işlemleri ;
+            do{
+                try  self.realm.write {
+                    if let item = self.selectedCategory?.items[indexPath.row] {
+                        self.realm.delete(item)
+                    }
+                }}catch{print("error delete")}
+            
+            
+        }
+        
+        
+        // customize the action appearance
+        deleteAction.image = UIImage(named: "delete")
+        
+        return [deleteAction]
+    }
+    
+    
+    
+    ////sonuna kadar kaydrma ;
+    
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeTableOptions {
+        var options = SwipeTableOptions()
+        options.expansionStyle = .destructive
+        return options
     }
     
     
