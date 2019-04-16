@@ -27,6 +27,8 @@ class CustomPopupViewController: UIViewController {
         let color = UIColor.white
         self.view.backgroundColor = color.withAlphaComponent(0.3)
         self.datePicker.setValue(UIColor.white, forKey: DatePickerProperties.TextColor.rawValue)
+        let loc = Locale(identifier: "tr")
+        self.datePicker.locale = loc
         
        
     }
@@ -44,6 +46,9 @@ class CustomPopupViewController: UIViewController {
             get{
                 let formatter = DateFormatter()
                 formatter.dateStyle = .full
+                let loc = Locale(identifier: "tr")
+                formatter.locale = loc
+                
                 return formatter.string(from: datePicker.date)
             }
         }
