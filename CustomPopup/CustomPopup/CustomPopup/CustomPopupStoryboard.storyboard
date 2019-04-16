@@ -27,7 +27,7 @@
                                             <constraint firstAttribute="width" constant="252" id="wo1-oq-u9m"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="0mc-EL-hmf">
@@ -41,16 +41,18 @@
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaQ-1X-A92">
                                         <rect key="frame" x="110" y="243" width="82" height="30"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.92032320205479456" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="BaQ-1X-A92" secondAttribute="height" multiplier="41:15" id="E6i-0j-iBF"/>
                                         </constraints>
+                                        <color key="tintColor" red="0.27185586090000002" green="0.61180609460000002" blue="0.38589417929999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Kaydet"/>
                                         <connections>
                                             <action selector="kaydetButtonClicked:" destination="mYg-57-pT2" eventType="touchUpInside" id="LT9-6U-7WZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.27185586090000002" green="0.61180609460000002" blue="0.38589417929999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="0mc-EL-hmf" firstAttribute="top" secondItem="ZPZ-8i-ixh" secondAttribute="bottom" constant="21" id="64U-c9-qle"/>
                                     <constraint firstAttribute="trailing" secondItem="0mc-EL-hmf" secondAttribute="trailing" constant="20" id="9uW-VS-YPD"/>
@@ -75,6 +77,7 @@
                     <connections>
                         <outlet property="datePicker" destination="0mc-EL-hmf" id="6U6-MC-fcO"/>
                         <outlet property="parentView" destination="sfJ-ji-Okm" id="eid-Lr-HKM"/>
+                        <outlet property="rootView" destination="QJ0-aM-ds7" id="sox-zH-NXS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="734-uX-zjD" userLabel="First Responder" sceneMemberID="firstResponder"/>

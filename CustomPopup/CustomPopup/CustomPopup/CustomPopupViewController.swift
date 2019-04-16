@@ -12,15 +12,21 @@ class CustomPopupViewController: UIViewController {
 
     @IBOutlet var parentView: UIView!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var rootView: UIView!
     
     //veri gönderebilmek için;
     var popupDelegate: PopupDataDelegate?
     
-   
+    private enum DatePickerProperties: String {
+        case TextColor = "textColor"
+        case HighlightsToday = "highlightsToday"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let color = UIColor.white
+        self.view.backgroundColor = color.withAlphaComponent(0.3)
+        self.datePicker.setValue(UIColor.white, forKey: DatePickerProperties.TextColor.rawValue)
         
        
     }
@@ -28,6 +34,7 @@ class CustomPopupViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(self.kapat))
         parentView.addGestureRecognizer(recognizer)
+        rootView.layer.cornerRadius = 17
     }
     
 
