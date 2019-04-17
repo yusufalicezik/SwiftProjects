@@ -26,7 +26,15 @@ class ViewController: UIViewController {
     
     }
 
+    /* status bar gizleme
+    override var prefersStatusBarHidden: Bool { return true }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // call this func to force preferredStatusBarStyle to be read again.
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    */
 
     @IBAction func tarihSecClicked(_ sender: Any) {
        performSegue(withIdentifier: "mySegue", sender: self)
