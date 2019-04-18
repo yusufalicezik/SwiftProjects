@@ -10,7 +10,8 @@ import UIKit
 
 class RandevuAlViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
    
-    let secimArray=["Hastane","Bölüm","Doktor","Gün","Saat"]
+    var secimArray=["Hastane","Bölüm","Doktor","Gün","Saat"]
+    var secilenIndex=0
     
 
     @IBOutlet weak var tableView: UITableView!
@@ -39,10 +40,31 @@ class RandevuAlViewController: UIViewController,UITableViewDelegate,UITableViewD
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        secilenIndex=indexPath.row
+        performSegue(withIdentifier: "toPopupVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "toPopupVC" {
+            let vc : CustomPopupViewController = segue.destination as! CustomPopupViewController
+           vc.secilenType=secilenIndex
+            vc.delegate=self
+            
+        }
     }
     
     
     @IBAction func randevuKaydetButonClicked(_ sender: Any) {
     }
+    
+}
+
+extension RandevuAlViewController:PopupDelegate{
+    func secilenString(secilenString: String, indisNo: Int) {
+        secimArray[indisNo]=secilenString
+        tableView.reloadData()
+    }
+    
     
 }

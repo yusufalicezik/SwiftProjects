@@ -296,11 +296,20 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="MMB-g5-Qpm" id="a5R-lg-NQu"/>
+                        <segue destination="KCh-bb-5DU" kind="presentation" identifier="toPopupVC" animates="NO" id="Scl-z2-2RA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVP-cd-vdc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1780" y="121.88905547226388"/>
+        </scene>
+        <!--CustomPopupStoryBoard-->
+        <scene sceneID="STA-xZ-0Cm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CustomPopupStoryBoard" id="KCh-bb-5DU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cxA-5m-E5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2480" y="-93"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qG6-5a-vo6">

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jUZ-b7-AIW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Popup View Controller-->
+        <scene sceneID="blP-Kw-3B4">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="jUZ-b7-AIW" customClass="CustomPopupViewController" customModule="NavDraw" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ph2-EN-wk2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFo-pN-hbF">
+                                <rect key="frame" x="53.5" y="218.5" width="268" height="250"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3nS-IG-bMI">
+                                        <rect key="frame" x="0.0" y="38" width="268" height="212"/>
+                                        <color key="backgroundColor" red="0.1793274339" green="0.57211690989999997" blue="0.5614030726" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="268" id="uGj-DO-GyW"/>
+                                            <constraint firstAttribute="height" constant="212" id="yea-RI-BQh"/>
+                                        </constraints>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPh-8S-TEa">
+                                        <rect key="frame" x="8" y="-1" width="63" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="1JJ-uU-Z4Y"/>
+                                            <constraint firstAttribute="width" constant="63" id="wJ4-X4-bUC"/>
+                                        </constraints>
+                                        <state key="normal" title="Vazgeç">
+                                            <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="vazgecButtonClicked:" destination="jUZ-b7-AIW" eventType="touchUpInside" id="aao-JW-HQz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUI-ZR-fft">
+                                        <rect key="frame" x="216" y="0.0" width="44" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="boL-oK-io2"/>
+                                            <constraint firstAttribute="height" constant="30" id="jj3-CP-VM6"/>
+                                        </constraints>
+                                        <state key="normal" title="Seç">
+                                            <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="secButtonClicked:" destination="jUZ-b7-AIW" eventType="touchUpInside" id="mbq-ea-XyF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1793274339" green="0.57211690989999997" blue="0.5614030726" alpha="0.6427386558" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="3nS-IG-bMI" firstAttribute="top" secondItem="HPh-8S-TEa" secondAttribute="bottom" constant="8" id="3I7-vO-XNq"/>
+                                    <constraint firstItem="3nS-IG-bMI" firstAttribute="leading" secondItem="zFo-pN-hbF" secondAttribute="leading" id="6PZ-YV-9SC"/>
+                                    <constraint firstAttribute="trailing" secondItem="jUI-ZR-fft" secondAttribute="trailing" constant="8" id="7N9-X3-Zl5"/>
+                                    <constraint firstItem="HPh-8S-TEa" firstAttribute="top" secondItem="zFo-pN-hbF" secondAttribute="top" constant="-1" id="AmT-S5-5Ve"/>
+                                    <constraint firstItem="jUI-ZR-fft" firstAttribute="leading" secondItem="HPh-8S-TEa" secondAttribute="trailing" constant="145" id="CCm-y1-Vec"/>
+                                    <constraint firstItem="jUI-ZR-fft" firstAttribute="top" secondItem="zFo-pN-hbF" secondAttribute="top" id="DF5-IM-krQ"/>
+                                    <constraint firstAttribute="height" constant="250" id="H3g-1K-1Wl"/>
+                                    <constraint firstAttribute="bottom" secondItem="3nS-IG-bMI" secondAttribute="bottom" id="Ozm-W0-9ja"/>
+                                    <constraint firstAttribute="width" constant="268" id="ctl-82-Fg9"/>
+                                    <constraint firstItem="HPh-8S-TEa" firstAttribute="leading" secondItem="zFo-pN-hbF" secondAttribute="leading" constant="8" id="frr-vh-ffD"/>
+                                    <constraint firstAttribute="trailing" secondItem="3nS-IG-bMI" secondAttribute="trailing" id="qJb-l0-sDQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.49269584760273971" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zFo-pN-hbF" firstAttribute="centerY" secondItem="Pma-Hf-V01" secondAttribute="centerY" id="ccH-KW-in7"/>
+                            <constraint firstItem="zFo-pN-hbF" firstAttribute="centerX" secondItem="Pma-Hf-V01" secondAttribute="centerX" id="qhZ-5L-RTo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pma-Hf-V01"/>
+                    </view>
+                    <connections>
+                        <outlet property="parentView" destination="ph2-EN-wk2" id="DRU-Pn-57L"/>
+                        <outlet property="pickerView" destination="3nS-IG-bMI" id="yrO-IU-kqE"/>
+                        <outlet property="rootView" destination="zFo-pN-hbF" id="qBn-PN-ld8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="070-rc-DHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.80000000000000004" y="91.304347826086968"/>
+        </scene>
+    </scenes>
+</document>

@@ -10,6 +10,9 @@
 		480D9EE022680F0100264056 /* buttonOff.json in Resources */ = {isa = PBXBuildFile; fileRef = 480D9EDE22680F0100264056 /* buttonOff.json */; };
 		480D9EE122680F0100264056 /* buttonOn.json in Resources */ = {isa = PBXBuildFile; fileRef = 480D9EDF22680F0100264056 /* buttonOn.json */; };
 		480D9EE52268281400264056 /* RandevuAlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480D9EE42268281400264056 /* RandevuAlViewController.swift */; };
+		480D9EEA226830ED00264056 /* CustomPopupStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 480D9EE9226830ED00264056 /* CustomPopupStoryBoard.storyboard */; };
+		480D9EEC2268329A00264056 /* CustomPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480D9EEB2268329A00264056 /* CustomPopupViewController.swift */; };
+		480D9EEF22683E0400264056 /* PopupDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480D9EEE22683E0400264056 /* PopupDelegate.swift */; };
 		4885286C2266B5410082F859 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885286B2266B5410082F859 /* AppDelegate.swift */; };
 		4885286E2266B5410082F859 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4885286D2266B5410082F859 /* ViewController.swift */; };
 		488528712266B5420082F859 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4885286F2266B5420082F859 /* Main.storyboard */; };
@@ -23,6 +26,9 @@
 		480D9EDE22680F0100264056 /* buttonOff.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buttonOff.json; sourceTree = "<group>"; };
 		480D9EDF22680F0100264056 /* buttonOn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buttonOn.json; sourceTree = "<group>"; };
 		480D9EE42268281400264056 /* RandevuAlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandevuAlViewController.swift; sourceTree = "<group>"; };
+		480D9EE9226830ED00264056 /* CustomPopupStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomPopupStoryBoard.storyboard; sourceTree = "<group>"; };
+		480D9EEB2268329A00264056 /* CustomPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopupViewController.swift; sourceTree = "<group>"; };
+		480D9EEE22683E0400264056 /* PopupDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupDelegate.swift; sourceTree = "<group>"; };
 		488528682266B5410082F859 /* NavDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4885286B2266B5410082F859 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4885286D2266B5410082F859 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +64,7 @@
 		480D9EDB22680EC500264056 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				480D9EE8226830C900264056 /* Custom Popup */,
 				4885286F2266B5420082F859 /* Main.storyboard */,
 			);
 			path = View;
@@ -66,6 +73,7 @@
 		480D9EDC22680ED400264056 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				480D9EED22683DDD00264056 /* Protocols */,
 				480D9EDD22680EEF00264056 /* HamburgerMenu */,
 				488528722266B5420082F859 /* Assets.xcassets */,
 				488528742266B5420082F859 /* LaunchScreen.storyboard */,
@@ -80,6 +88,23 @@
 				480D9EDF22680F0100264056 /* buttonOn.json */,
 			);
 			path = HamburgerMenu;
+			sourceTree = "<group>";
+		};
+		480D9EE8226830C900264056 /* Custom Popup */ = {
+			isa = PBXGroup;
+			children = (
+				480D9EE9226830ED00264056 /* CustomPopupStoryBoard.storyboard */,
+				480D9EEB2268329A00264056 /* CustomPopupViewController.swift */,
+			);
+			path = "Custom Popup";
+			sourceTree = "<group>";
+		};
+		480D9EED22683DDD00264056 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				480D9EEE22683E0400264056 /* PopupDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		4885285F2266B5410082F859 = {
@@ -191,6 +216,7 @@
 			files = (
 				488528762266B5420082F859 /* LaunchScreen.storyboard in Resources */,
 				480D9EE022680F0100264056 /* buttonOff.json in Resources */,
+				480D9EEA226830ED00264056 /* CustomPopupStoryBoard.storyboard in Resources */,
 				488528732266B5420082F859 /* Assets.xcassets in Resources */,
 				480D9EE122680F0100264056 /* buttonOn.json in Resources */,
 				488528712266B5420082F859 /* Main.storyboard in Resources */,
@@ -251,8 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				480D9EEC2268329A00264056 /* CustomPopupViewController.swift in Sources */,
 				480D9EE52268281400264056 /* RandevuAlViewController.swift in Sources */,
 				4885286E2266B5410082F859 /* ViewController.swift in Sources */,
+				480D9EEF22683E0400264056 /* PopupDelegate.swift in Sources */,
 				4885286C2266B5410082F859 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
