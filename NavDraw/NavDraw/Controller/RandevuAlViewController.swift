@@ -61,7 +61,7 @@ class RandevuAlViewController: UIViewController,UITableViewDelegate,UITableViewD
 }
 
 extension RandevuAlViewController:PopupDelegate{
-    func secilenString(secilenString: String, indisNo: Int) {
+    func secilenString(secilenString: String, indisNo: Int=0) {
         secimArray[indisNo]=secilenString
         tableView.reloadData()
     }

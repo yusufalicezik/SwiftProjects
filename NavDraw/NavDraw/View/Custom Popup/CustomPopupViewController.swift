@@ -73,7 +73,7 @@ class CustomPopupViewController: UIViewController,UIPickerViewDelegate,UIPickerV
     
     
     @IBAction func secButtonClicked(_ sender: Any) {
-        delegate?.secilenString(secilenString: secilenString!, indisNo: secilenType!)
+        delegate?.secilenString(secilenString: secilenString ?? "seçim yapınız", indisNo: secilenType ?? 0)
         kapat()
     }
     
@@ -107,7 +107,11 @@ class CustomPopupViewController: UIViewController,UIPickerViewDelegate,UIPickerV
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if row>=0{
         secilenString = secilenArray[row]
+        }else{
+            secilenString="Lütfen Seçim Yapın"
+        }
     }
     
     
