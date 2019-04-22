@@ -113,6 +113,10 @@ class ViewController: UIViewController {
     @IBAction func randevuAlButonClicked(_ sender: Any) {
         
     }
+    @IBAction func bilgiGuncelleClicked(_ sender: Any) {
+        let alert = ShortAlert.sharedAlert.alertOlustur(baslik: "Tiklandi", mesaj: "Butona tikladiniz")
+        present(alert, animated: true, completion: nil)
+    }
     
 }
 
