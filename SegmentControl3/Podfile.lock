@@ -1,16 +1,20 @@
 PODS:
+  - CircleMenu (4.0.1)
   - SwipeableTabBarController (2.0.0)
 
 DEPENDENCIES:
+  - CircleMenu
   - SwipeableTabBarController
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CircleMenu
     - SwipeableTabBarController
 
 SPEC CHECKSUMS:
+  CircleMenu: d846569acbe805b75cef5793056707224240db64
   SwipeableTabBarController: 4706fcc25de25785c87a7d0b9ac63c056e79bda3
 
-PODFILE CHECKSUM: a606eb968ac73334fdd2c12fe9c5774597cd67bf
+PODFILE CHECKSUM: 102ed94a228317e0f479cd9706bf6ccb726f57b3
 
 COCOAPODS: 1.6.1

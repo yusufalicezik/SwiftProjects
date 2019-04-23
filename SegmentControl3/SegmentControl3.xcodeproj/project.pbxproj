@@ -12,6 +12,8 @@
 		483658F3226F8D620043D2C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483658F1226F8D620043D2C0 /* Main.storyboard */; };
 		483658F5226F8D630043D2C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 483658F4226F8D630043D2C0 /* Assets.xcassets */; };
 		483658F8226F8D640043D2C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483658F6226F8D640043D2C0 /* LaunchScreen.storyboard */; };
+		4862F3B1226FCFAC00E4AFA7 /* aa.png in Resources */ = {isa = PBXBuildFile; fileRef = 4862F3B0226FCFAC00E4AFA7 /* aa.png */; };
+		4862F3B3226FD20300E4AFA7 /* bb.png in Resources */ = {isa = PBXBuildFile; fileRef = 4862F3B2226FD20300E4AFA7 /* bb.png */; };
 		48C75DD7226F92F900AEA615 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C75DD6226F92F900AEA615 /* TabBarController.swift */; };
 		8DB7EF6059AE5981220AAF0D /* Pods_SegmentControl3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7A8B2632E80FE466213E43 /* Pods_SegmentControl3.framework */; };
 /* End PBXBuildFile section */
@@ -25,6 +27,8 @@
 		483658F4226F8D630043D2C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		483658F7226F8D640043D2C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		483658F9226F8D640043D2C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4862F3B0226FCFAC00E4AFA7 /* aa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aa.png; sourceTree = "<group>"; };
+		4862F3B2226FD20300E4AFA7 /* bb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bb.png; sourceTree = "<group>"; };
 		48C75DD6226F92F900AEA615 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4B3E16502B042F9A1A4C4BF1 /* Pods-SegmentControl3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegmentControl3.release.xcconfig"; path = "Target Support Files/Pods-SegmentControl3/Pods-SegmentControl3.release.xcconfig"; sourceTree = "<group>"; };
 		92974A92E364A89EF5A8A528 /* Pods-SegmentControl3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SegmentControl3.debug.xcconfig"; path = "Target Support Files/Pods-SegmentControl3/Pods-SegmentControl3.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 		483658EC226F8D620043D2C0 /* SegmentControl3 */ = {
 			isa = PBXGroup;
 			children = (
+				4862F3B2226FD20300E4AFA7 /* bb.png */,
+				4862F3B0226FCFAC00E4AFA7 /* aa.png */,
 				483658ED226F8D620043D2C0 /* AppDelegate.swift */,
 				483658EF226F8D620043D2C0 /* ViewController.swift */,
 				483658F1226F8D620043D2C0 /* Main.storyboard */,
@@ -153,7 +159,9 @@
 			files = (
 				483658F8226F8D640043D2C0 /* LaunchScreen.storyboard in Resources */,
 				483658F5226F8D630043D2C0 /* Assets.xcassets in Resources */,
+				4862F3B3226FD20300E4AFA7 /* bb.png in Resources */,
 				483658F3226F8D620043D2C0 /* Main.storyboard in Resources */,
+				4862F3B1226FCFAC00E4AFA7 /* aa.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,12 +199,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SegmentControl3/Pods-SegmentControl3-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SwipeableTabBarController/SwipeableTabBarController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeableTabBarController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "32FD62EB2072ABE8D7F473524297F6D3"
-               BuildableName = "SwipeableTabBarController.framework"
-               BlueprintName = "SwipeableTabBarController"
+               BlueprintIdentifier = "404A878F123C2A9D0A6C2101BF182D8E"
+               BuildableName = "CircleMenu.framework"
+               BlueprintName = "CircleMenu"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "32FD62EB2072ABE8D7F473524297F6D3"
-            BuildableName = "SwipeableTabBarController.framework"
-            BlueprintName = "SwipeableTabBarController"
+            BlueprintIdentifier = "404A878F123C2A9D0A6C2101BF182D8E"
+            BuildableName = "CircleMenu.framework"
+            BlueprintName = "CircleMenu"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

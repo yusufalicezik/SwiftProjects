@@ -7,5 +7,6 @@ target 'SegmentControl3' do
 
   # Pods for SegmentControl3
 pod 'SwipeableTabBarController'
+pod 'CircleMenu'
 
 end
