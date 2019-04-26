@@ -30,6 +30,7 @@ class ViewController: UIViewController,  CircleMenuDelegate {
     func circleMenu(_ circleMenu: CircleMenu, buttonDidSelected button: UIButton, atIndex: Int){
 
         print("\(atIndex) . buton seçildi..")
+        
     }
     
 

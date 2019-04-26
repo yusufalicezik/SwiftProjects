@@ -170,36 +170,261 @@ import UIKit
 
 //problem : 1-2,1-4,5-7,6-6 //Veritabanından tek columndan gelen stringi parçalama algoritması ;
 
+//
+//let gunDic=["1":"Pazartesi","2":"Salı","3":"Çarşamba"] //...4,5,6...
+//
+//let saatDic=["1":"08:00","2":"09:00","3":"10:00","4":"11:00"] //...5,6,7...
+//
+//
+//
+//var gelenString="1-2,2-4,1-3,2-3"
+//
+//
+//func parcala(gelenString:String)->([String],[String]){
+//
+//    var gunlerArray=[String]()
+//    var saatlerArray=[String]()
+//
+//    let ilkAyrilmisDizi=gelenString.split(separator: ",") //1-2   1-4  ....
+//    for i in 0..<ilkAyrilmisDizi.count {
+//       let ikinciAyrilmisDizi = ilkAyrilmisDizi[i].split(separator: "-") // 1  2
+//       gunlerArray.append(String(ikinciAyrilmisDizi[0])) // 1 -) pazartesi     1-) Pazartesi
+//        saatlerArray.append(String(ikinciAyrilmisDizi[1])) // 2 -) saat 09:00    4-) Saat 11:00
+//    }
+//    return (gunlerArray,saatlerArray)
+//}
+//
+//
+//var (gunArray,saatArray) = parcala(gelenString: gelenString)
+//
+//for i in 0..<gunArray.count{
+//    if let tempGun = gunDic[gunArray[i]], let tempSaat = saatDic[saatArray[i]] {
+//        print(tempGun," Günü, ", tempSaat, "Saati Dolu")
+//    }
+//
+//}
+//----------------------------------------------------//----------------------------------------------------
 
-let gunDic=["1":"Pazartesi","2":"Salı","3":"Çarşamba"] //...4,5,6...
+//var denemeClousere : (Int,Int)->Int  = {$0 + $1}
+//
+//denemeClousere(1,4)
+//
+//
+//var kareAlmaClousure : (Int) ->Int = { //değişkene atar gibi yaptık, ilk önce türünü daha sonra türünün doldurulmuşunu yazarız -> yerine de in
+//   $0*$0
+//}
+//
+//print(kareAlmaClousure(8))
+//----------------------------------------------------//----------------------------------------------------
 
-let saatDic=["1":"08:00","2":"09:00","3":"10:00","4":"11:00"] //...5,6,7...
+//
+//var dizi = Array(1...100).filter( {$0 % 2 == 0} )
+//print(dizi)
+//
+//----------------------------------------------------//----------------------------------------------------
+
+//5 ‘ e Bölünebilen Sayıları Filtreleyen Closure, 2 ye bölünebilen closure, 10 dan küçükleri filtreleyen vs..
+
+//var dizi=[1,4,5,12,15,19,20,30,25,6,78,95]
+//
+//func closureFiltreleme(closure:(Int)->Bool, dizi:[Int])->[Int]{
+//    var filtreliDizi=[Int]()
+//    for i in dizi{
+//        if closure(i){
+//            filtreliDizi.append(i)
+//        }
+//    }
+//    return filtreliDizi
+//}
+//
+//closureFiltreleme(closure: { (sayi:Int) -> Bool in
+//    sayi % 5 == 0
+//},dizi:dizi)
+//
+//
+//
+//closureFiltreleme(closure: { (sayi:Int) -> Bool in
+//    sayi < 10
+//}, dizi: dizi)
+//
+////closure filtreleme adlı fonksiyonu istediğimiz kadar kullanabiliriz bu şekilde farklı farklı olarak..
+////gönderirken işlevi yazarız ve daha temiz kod olur.
+//
+//
+//
+//----------------------------------------------------//----------------------------------------------------
+//
+//var dizi = [Int]()
+//var dizi2 : Array<Int> = [2,3,4]
+//dizi2.append(3)
+//
+//print(Set(dizi2))
+//----------------------------------------------------//----------------------------------------------------
+
+//
+//protocol MyDataDelegate{
+//    func veriGonder(string:String)
+//}
+//
+//class FirstVC{
+//    var delegate:MyDataDelegate?
+//
+//}
+//
+//class SecondVC:MyDataDelegate{
+//
+//
+//
+//    func veriGonder(string: String) {
+//        print("veri geldi..\(string)")
+//    }
+//
+//
+//}
+//var firstVc = FirstVC()
+//firstVc.delegate = SecondVC()
+//
+//firstVc.delegate?.veriGonder(string: "sa")
+
+//----------------------------------------------------//----------------------------------------------------
 
 
 
-var gelenString="1-2,2-4,1-3,2-3"
+//var kisaClosure : (Int,Int)->Int = {
+//    (sayi1:Int,sayi2:Int) in
+//        return sayi1+sayi2
+//
+//}
+//
+//kisaClosure(1,3)
+//
+//
+//func deneme(closure: (Int)->Bool, sayi:Int){
+//    if closure(sayi){
+//        print("true")
+//    }
+//}
+//
+//deneme(closure: { (sayi) -> Bool in
+//    return sayi > 0
+//}, sayi: 0)
+//----------------------------------------------------//----------------------------------------------------
 
 
-func parcala(gelenString:String)->([String],[String]){
+//ENUM
+
+//normel enum
+//enum Gezegenler {
+//    case Dunya,Mars,Neptun
+//}
+//
+//let gezegen = Gezegenler.Dunya
+//
+//switch gezegen {
+//case .Dunya:
+//        print("gezegen dünyadır")
+//case .Mars :
+//        print("gezegen marstır")
+//default:
+//    print("tanımsız gezegen")
+//}
+//
+//
+//----------------------------------------------------//----------------------------------------------------
+
+//enum-String-rawvalue
+
+//enum Gezegenler:String {
+//    case Dunya
+//    case Mars
+//    case Neptun
+//}
+//
+//let gezegen = Gezegenler.Dunya.rawValue // : String ekleyince rawvalue gelir ve o da toString gibidir. gezegeni string e dönüştürür(alt yapıp üstüne bakınca görürüz.)
+//
+
+//----------------------------------------------------//----------------------------------------------------
+
+
+//enum Gezegenler:String {
+//    case Dunya = "Yaşam var"
+//    case Mars = "Kızıl gezegen"
+//    case Neptun = "non"
+//}
+//
+//let gezegen = Gezegenler.Dunya.rawValue // : String ekleyince rawvalue gelir ve o da toString gibidir. gezegeni string e dönüştürür(alt yapıp üstüne bakınca görürüz.)
+//print(gezegen) //eğer bir değer var ise onu yazdırır. çıktı : yaşam var..
+//----------------------------------------------------//----------------------------------------------------
+
+
+//enum Not : String {
+//    case Doksan = "AA"
+//    case Seksen = "BA"
+//    case Yetmiş = "BB"
+//
+//    var tanim : String {
+//        return self.rawValue
+//    }
+//
+//
+//}
+//
+//var not = Not.Doksan.tanim
+//
+//
+//
+//----------------------------------------------------//----------------------------------------------------
+
+//enum Renkler : String {
+//    case Success
+//    case Danger
+//
+//    var renkGetir : UIColor {
+//        switch self {
+//        case .Danger:
+//            return UIColor.red
+//        default:
+//            return UIColor.white
+//        }
+//    }
+//}
+//
+//var renk = Renkler.Danger.renkGetir
+
+
+//----------------------------------------------------//----------------------------------------------------
+
+class UyariMesaji {
     
-    var gunlerArray=[String]()
-    var saatlerArray=[String]()
-    
-    let ilkAyrilmisDizi=gelenString.split(separator: ",") //1-2   1-4  ....
-    for i in 0..<ilkAyrilmisDizi.count {
-       let ikinciAyrilmisDizi = ilkAyrilmisDizi[i].split(separator: "-") // 1  2
-       gunlerArray.append(String(ikinciAyrilmisDizi[0])) // 1 -) pazartesi     1-) Pazartesi
-        saatlerArray.append(String(ikinciAyrilmisDizi[1])) // 2 -) saat 09:00    4-) Saat 11:00
+    enum MesajTuru : String{
+        case BasitUyari
+        case CiddiUyari
     }
-    return (gunlerArray,saatlerArray)
+    enum MesajButonTuru : String{
+        case TamamButon
+        case IleriButon
+    }
+    enum MesajRengi : String{
+        case Kirmizi
+        case Sari
+        case Yesil
+    }
+    var mesajTuru : MesajTuru
+    var mesajButonTuru : MesajButonTuru
+    var mesajRengi : MesajRengi
+    
+    init(_ mesajTuru:MesajTuru, _ mesajButonTuru:MesajButonTuru, _ mesajRengi:MesajRengi) {
+        self.mesajTuru=mesajTuru
+        self.mesajRengi=mesajRengi
+        self.mesajButonTuru=mesajButonTuru
+    }
+    
+    func mesajiGoster(){
+        print(self.mesajButonTuru.rawValue + " / " + self.mesajTuru.rawValue + " / " + self.mesajRengi.rawValue)
+    }
+    
 }
 
+var myAlert = UyariMesaji(.BasitUyari, .TamamButon, .Yesil)
 
-var (gunArray,saatArray) = parcala(gelenString: gelenString)
-
-for i in 0..<gunArray.count{
-    if let tempGun = gunDic[gunArray[i]], let tempSaat = saatDic[saatArray[i]] {
-        print(tempGun," Günü, ", tempSaat, "Saati Dolu")
-    }
-    
-}
+myAlert.mesajiGoster()
