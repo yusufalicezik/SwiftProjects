@@ -21,10 +21,32 @@ class TopRatedCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         movieIDLabel.isHidden=true
+        setupAnimations()
         
         
         
     }
+    
+    
+    func setupAnimations(){
+        let min=CGFloat(-30)
+        let max=CGFloat(30)
+        
+        let xMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.x", type: .tiltAlongHorizontalAxis)
+        xMotion.minimumRelativeValue = min
+        xMotion.maximumRelativeValue = max
+        
+        let yMotion = UIInterpolatingMotionEffect(keyPath: "layer.transform.translation.y", type: .tiltAlongVerticalAxis)
+        yMotion.minimumRelativeValue = min
+        yMotion.maximumRelativeValue = max
+        
+        let motionEffectGroup = UIMotionEffectGroup()
+        motionEffectGroup.motionEffects = [xMotion,yMotion]
+        movieImage.addMotionEffect(motionEffectGroup)
+        
+    }
+    
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
