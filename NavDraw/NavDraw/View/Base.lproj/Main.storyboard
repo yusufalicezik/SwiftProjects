@@ -299,7 +299,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="MMB-g5-Qpm" id="a5R-lg-NQu"/>
-                        <segue destination="KCh-bb-5DU" kind="presentation" identifier="toPopupVC" animates="NO" id="Scl-z2-2RA"/>
+                        <segue destination="KCh-bb-5DU" kind="presentation" identifier="toPopupVC" animates="NO" id="uam-p6-jYL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVP-cd-vdc" userLabel="First Responder" sceneMemberID="firstResponder"/>

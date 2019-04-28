@@ -46,6 +46,11 @@
                                     <constraint firstAttribute="height" constant="50" id="AuM-pd-vMK"/>
                                 </constraints>
                                 <state key="normal" title="Giriş"/>
+                                <connections>
+                                    <segue destination="7c3-lz-EST" kind="popoverPresentation" popoverAnchorView="AtQ-ug-5Im" id="Qab-9c-zQC">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.39741725078931217" green="0.70449044724500398" blue="0.41939667150636578" alpha="0.86427119008356168" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,6 +81,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="976.79999999999995" y="18.440779610194905"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dcq-7U-204">
+            <objects>
+                <viewController id="7c3-lz-EST" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uEC-Nm-mPA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adam.png" translatesAutoresizingMaskIntoConstraints="NO" id="BD6-5O-QyU">
+                                <rect key="frame" x="118" y="264" width="139" height="139"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BD6-5O-QyU" firstAttribute="centerY" secondItem="uEC-Nm-mPA" secondAttribute="centerY" id="ZyE-e8-sjy"/>
+                            <constraint firstItem="BD6-5O-QyU" firstAttribute="centerX" secondItem="uEC-Nm-mPA" secondAttribute="centerX" id="utb-kR-zle"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OUS-lC-ViA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ty-60-Euw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1698" y="14"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="71T-he-FQf">

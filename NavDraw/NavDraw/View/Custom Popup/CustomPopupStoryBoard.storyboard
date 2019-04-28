@@ -14,12 +14,12 @@
         <scene sceneID="blP-Kw-3B4">
             <objects>
                 <viewController modalPresentationStyle="overCurrentContext" id="jUZ-b7-AIW" customClass="CustomPopupViewController" customModule="NavDraw" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ph2-EN-wk2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleAspectFit" id="ph2-EN-wk2">
+                        <rect key="frame" x="0.0" y="0.0" width="290" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFo-pN-hbF">
-                                <rect key="frame" x="53.5" y="218.5" width="268" height="250"/>
+                                <rect key="frame" x="11" y="25" width="268" height="250"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3nS-IG-bMI">
                                         <rect key="frame" x="0.0" y="38" width="268" height="212"/>
@@ -74,13 +74,16 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="0.49269584760273971" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.1793274339" green="0.57211690989999997" blue="0.5614030726" alpha="0.91074486300000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zFo-pN-hbF" firstAttribute="centerY" secondItem="Pma-Hf-V01" secondAttribute="centerY" id="ccH-KW-in7"/>
                             <constraint firstItem="zFo-pN-hbF" firstAttribute="centerX" secondItem="Pma-Hf-V01" secondAttribute="centerX" id="qhZ-5L-RTo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pma-Hf-V01"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <size key="freeformSize" width="290" height="300"/>
                     <connections>
                         <outlet property="parentView" destination="ph2-EN-wk2" id="DRU-Pn-57L"/>
                         <outlet property="pickerView" destination="3nS-IG-bMI" id="yrO-IU-kqE"/>
