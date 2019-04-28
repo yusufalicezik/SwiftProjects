@@ -30,7 +30,7 @@ class CustomComponentsTests: XCTestCase {
         }
     }
     
-    func testDeneme(){
+    func testDeneme(){ //var olan fonksiyonları buradan test edebiliriz.
         if 1 == 1{
            
         }

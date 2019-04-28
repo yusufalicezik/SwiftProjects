@@ -29,6 +29,7 @@ class MainVC: UIViewController {
     }
     
     @objc func tiklama(){
+        view.endEditing(true) //klavyeyi gizleme
         print("clicked")
     }
 
