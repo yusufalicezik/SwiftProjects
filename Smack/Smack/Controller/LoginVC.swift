@@ -1,14 +1,14 @@
 //
-//  DenemeViewController.swift
+//  LoginVC.swift
 //  Smack
 //
-//  Created by Yusuf ali cezik on 29.04.2019.
+//  Created by Yusuf ali cezik on 30.04.2019.
 //  Copyright © 2019 Yusuf Ali Cezik. All rights reserved.
 //
 
 import UIKit
 
-class DenemeViewController: UIViewController {
+class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +16,7 @@ class DenemeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func geriButonClicked(_ sender: Any) {
+    @IBAction func backButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     

@@ -10,13 +10,17 @@ import UIKit
 
 class ChannelVC: UIViewController {
 
+    @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.revealViewController()?.rearViewRevealWidth = self.view.frame.width - 60 //açılan menünün ne kadar açılacağını belirler. 
 
     }
     
-
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "toLogin", sender: nil)
+    }
+    
    
 
 }
