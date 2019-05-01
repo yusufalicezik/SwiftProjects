@@ -29,5 +29,8 @@ class LoginVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func createAccountButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_CREATEACCOUNT, sender: nil)
+    }
+    
 }

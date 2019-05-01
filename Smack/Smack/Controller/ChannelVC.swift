@@ -11,6 +11,11 @@ import UIKit
 class ChannelVC: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
+    @IBAction func prepareForUnwind(segue:UIStoryboardSegue){ //elle yazdık, istediğimiz controller a (segue) gönderebilmek için
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.revealViewController()?.rearViewRevealWidth = self.view.frame.width - 60 //açılan menünün ne kadar açılacağını belirler. 
@@ -18,7 +23,7 @@ class ChannelVC: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "toLogin", sender: nil)
+        performSegue(withIdentifier: TO_LOGIN, sender: nil)
     }
     
    
