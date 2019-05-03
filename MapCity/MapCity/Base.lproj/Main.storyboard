@@ -87,6 +87,57 @@
             </objects>
             <point key="canvasLocation" x="40.799999999999997" y="26.53673163418291"/>
         </scene>
+        <!--PopVC-->
+        <scene sceneID="Bx5-FE-Ivp">
+            <objects>
+                <viewController storyboardIdentifier="PopVC" id="v9X-lV-uIC" customClass="PopVC" customModule="MapCity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T9c-JD-exI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A6b-uI-XVP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvK-M2-bap">
+                                <rect key="frame" x="5" y="626" width="365" height="21"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Çıkmak için çift tıklayın" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOt-Ly-kQy">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="21"/>
+                                        <color key="backgroundColor" red="0.96470588239999999" green="0.65098039220000004" blue="0.13725490200000001" alpha="0.73975278249999998" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="JOt-Ly-kQy" secondAttribute="trailing" id="6do-iD-RYS"/>
+                                    <constraint firstItem="JOt-Ly-kQy" firstAttribute="leading" secondItem="PvK-M2-bap" secondAttribute="leading" id="BTR-rU-ALL"/>
+                                    <constraint firstAttribute="bottom" secondItem="JOt-Ly-kQy" secondAttribute="bottom" id="Nu5-fa-la9"/>
+                                    <constraint firstItem="JOt-Ly-kQy" firstAttribute="top" secondItem="PvK-M2-bap" secondAttribute="top" id="jrb-7J-l78"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PvK-M2-bap" firstAttribute="leading" secondItem="QWf-v6-89z" secondAttribute="leading" constant="5" id="3mH-1Q-uUU"/>
+                            <constraint firstItem="A6b-uI-XVP" firstAttribute="leading" secondItem="QWf-v6-89z" secondAttribute="leading" id="BEM-3s-jQ3"/>
+                            <constraint firstItem="A6b-uI-XVP" firstAttribute="trailing" secondItem="QWf-v6-89z" secondAttribute="trailing" id="GoZ-Mc-rYO"/>
+                            <constraint firstItem="QWf-v6-89z" firstAttribute="trailing" secondItem="PvK-M2-bap" secondAttribute="trailing" constant="5" id="PhY-xe-eux"/>
+                            <constraint firstItem="A6b-uI-XVP" firstAttribute="bottom" secondItem="QWf-v6-89z" secondAttribute="bottom" id="iSi-UX-YRl"/>
+                            <constraint firstItem="QWf-v6-89z" firstAttribute="bottom" secondItem="PvK-M2-bap" secondAttribute="bottom" constant="20" id="lPf-1n-bl9"/>
+                            <constraint firstItem="A6b-uI-XVP" firstAttribute="top" secondItem="T9c-JD-exI" secondAttribute="top" id="yt3-oH-ec8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QWf-v6-89z"/>
+                    </view>
+                    <connections>
+                        <outlet property="popImageView" destination="A6b-uI-XVP" id="kWR-c2-mcn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uz5-Qk-mNq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968.79999999999995" y="55.322338830584712"/>
+        </scene>
     </scenes>
     <resources>
         <image name="locationButton" width="67" height="67"/>
