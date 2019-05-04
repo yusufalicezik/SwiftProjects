@@ -26,7 +26,21 @@ class AddTaskVC: UIViewController {
     }
     
     @IBAction func nextButtonClicked(_ sender: Any) {
+        
+        
         guard let listsVC = storyboard?.instantiateViewController(withIdentifier: "ListsVC") as? ListsVC else {return}
+        
+        //eklenilen verileri oraya göndermek için;
+        if let newTask = textView.text {
+         let tempTask = Task(name: newTask, finished: false)
+         listsVC.taskArray.append(tempTask)
+        
+        }else {
+            print("boş")
+        }
+        //
+        
+        
         presentAddTaskVC(listsVC)
     }
     

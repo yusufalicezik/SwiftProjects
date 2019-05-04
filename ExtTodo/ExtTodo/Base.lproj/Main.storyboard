@@ -73,7 +73,7 @@
                             </stackView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j0C-2k-j4O">
                                 <rect key="frame" x="0.0" y="70" width="375" height="597"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="62" id="igA-Gg-6WH" customClass="CustomTableviewCell" customModule="ExtTodo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="62"/>
@@ -82,10 +82,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="61.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYF-Yg-DqL">
-                                                    <rect key="frame" x="139" y="20.5" width="42" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYF-Yg-DqL">
+                                                    <rect key="frame" x="165" y="18" width="45.5" height="25.5"/>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="18"/>
+                                                    <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="0.80425941779999999" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -94,6 +94,7 @@
                                                 <constraint firstItem="lYF-Yg-DqL" firstAttribute="centerY" secondItem="ubl-Uo-agJ" secondAttribute="centerY" id="MQv-qd-MvS"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96470588239999999" green="0.65098039220000004" blue="0.13725490200000001" alpha="0.73975278249999998" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="taskNameLabel" destination="lYF-Yg-DqL" id="b1r-Xu-X6f"/>
                                         </connections>
@@ -117,6 +118,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="emptyView" destination="1Dw-1B-As6" id="ewH-15-Edt"/>
                         <outlet property="tableView" destination="j0C-2k-j4O" id="fe6-J1-Zc0"/>
                     </connections>
                 </viewController>
