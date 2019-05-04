@@ -88,14 +88,23 @@
                                                     <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="0.80425941779999999" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fh3-sH-t8B">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="61.5"/>
+                                                    <color key="backgroundColor" red="0.28100920376712329" green="0.70449044719999998" blue="0.41939667149999998" alpha="0.86427119009999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="lYF-Yg-DqL" firstAttribute="centerX" secondItem="ubl-Uo-agJ" secondAttribute="centerX" id="1u6-e3-nNK"/>
                                                 <constraint firstItem="lYF-Yg-DqL" firstAttribute="centerY" secondItem="ubl-Uo-agJ" secondAttribute="centerY" id="MQv-qd-MvS"/>
+                                                <constraint firstItem="fh3-sH-t8B" firstAttribute="top" secondItem="ubl-Uo-agJ" secondAttribute="top" id="QeZ-qg-hvE"/>
+                                                <constraint firstAttribute="bottom" secondItem="fh3-sH-t8B" secondAttribute="bottom" id="bDY-zZ-cSU"/>
+                                                <constraint firstItem="fh3-sH-t8B" firstAttribute="leading" secondItem="ubl-Uo-agJ" secondAttribute="leading" id="hRD-E9-vRB"/>
+                                                <constraint firstAttribute="trailing" secondItem="fh3-sH-t8B" secondAttribute="trailing" id="zs3-Bw-iOf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.96470588239999999" green="0.65098039220000004" blue="0.13725490200000001" alpha="0.73975278249999998" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="finishedBackground" destination="fh3-sH-t8B" id="zc3-if-cTs"/>
                                             <outlet property="taskNameLabel" destination="lYF-Yg-DqL" id="b1r-Xu-X6f"/>
                                         </connections>
                                     </tableViewCell>

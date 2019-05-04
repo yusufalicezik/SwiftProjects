@@ -11,9 +11,16 @@ import UIKit
 class CustomTableviewCell: UITableViewCell {
 
     @IBOutlet weak var taskNameLabel: UILabel!
+    @IBOutlet weak var finishedBackground: UIView!
     
-    func confData(taskName:String){
-        taskNameLabel.text = taskName
+    func confData(task:Task){
+        if task.finished! {
+            finishedBackground.isHidden = false
+        }else{
+            finishedBackground.isHidden = true
+        }
+        
+        taskNameLabel.text = task.name!
     }
     
     
