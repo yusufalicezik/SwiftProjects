@@ -15,7 +15,7 @@ class CurrentUserDefaults {
     var userID:String?
     var userName:String?
     var userImage:String?
-    
-    
-    
+        
 }
+
+

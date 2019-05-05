@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path 2logo" translatesAutoresizingMaskIntoConstraints="NO" id="XKm-GD-26K">
-                                <rect key="frame" x="65" y="85" width="245" height="130"/>
+                                <rect key="frame" x="65" y="84.999999999999986" width="245" height="130.00000000000003"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="EV8-Wm-RSi"/>
                                     <constraint firstAttribute="width" constant="245" id="vqH-rx-zEF"/>
@@ -73,6 +73,9 @@
                                 <state key="normal" title="Giriş">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="girisButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jG3-aJ-e7T"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -98,15 +101,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordLabel" destination="BW5-3n-8fY" id="qCZ-z6-0h0"/>
+                        <outlet property="usernameLabel" destination="DY8-B9-Ogt" id="qGP-nB-CVj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="120.98950524737631"/>
         </scene>
-        <!--View Controller-->
+        <!--HomeVC-->
         <scene sceneID="pUO-OM-iDI">
             <objects>
-                <viewController id="oht-cP-RhS" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="oht-cP-RhS" customClass="HomeVC" customModule="MockJS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RTB-ro-TR5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,49 +122,91 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3n-Qy-I2r">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RectanglenavBack" translatesAutoresizingMaskIntoConstraints="NO" id="ZbY-Aa-C6v">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="72" id="R4l-nM-3ti"/>
+                                        </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cX-0r-dbo">
+                                        <rect key="frame" x="20" y="20" width="43" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="HPO-RW-J5g"/>
+                                            <constraint firstAttribute="width" constant="43" id="bjb-Cd-WWF"/>
+                                        </constraints>
+                                        <state key="normal" image="GrouphamburgerButon"/>
+                                        <connections>
+                                            <action selector="hamburgerButtonClicked:" destination="oht-cP-RhS" eventType="touchUpInside" id="HdB-Ky-KX8"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="4Gt-HX-GKi"/>
+                                    <constraint firstItem="7cX-0r-dbo" firstAttribute="top" secondItem="R3n-Qy-I2r" secondAttribute="top" constant="20" id="3fA-Zl-tW5"/>
+                                    <constraint firstAttribute="bottom" secondItem="7cX-0r-dbo" secondAttribute="bottom" constant="15" id="4Ka-Ic-gSd"/>
+                                    <constraint firstItem="7cX-0r-dbo" firstAttribute="leading" secondItem="R3n-Qy-I2r" secondAttribute="leading" constant="20" id="EHN-Hd-Rnc"/>
                                     <constraint firstItem="ZbY-Aa-C6v" firstAttribute="top" secondItem="R3n-Qy-I2r" secondAttribute="top" id="LJY-QT-fRy"/>
                                     <constraint firstAttribute="bottom" secondItem="ZbY-Aa-C6v" secondAttribute="bottom" id="NBD-3Y-FLe"/>
                                     <constraint firstItem="ZbY-Aa-C6v" firstAttribute="leading" secondItem="R3n-Qy-I2r" secondAttribute="leading" id="eKq-u9-V7C"/>
                                     <constraint firstAttribute="trailing" secondItem="ZbY-Aa-C6v" secondAttribute="trailing" id="lir-ek-Kb5"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hoş geldin, xx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJi-72-Rw2">
-                                <rect key="frame" x="133" y="323" width="108" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoş geldin, xx" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJi-72-Rw2">
+                                <rect key="frame" x="133.5" y="323" width="108" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qg9-VX-Rr1">
+                                <rect key="frame" x="307" y="632" width="63" height="30"/>
+                                <state key="normal" title="Çıkış Yap"/>
+                                <connections>
+                                    <action selector="cikisYapButtonClicked:" destination="oht-cP-RhS" eventType="touchUpInside" id="20A-lz-hkF"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle Copy 2slideBack" translatesAutoresizingMaskIntoConstraints="NO" id="FpC-g3-6a7">
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" id="AgJ-ER-Do1"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NiN-dK-qLM" firstAttribute="top" secondItem="RTB-ro-TR5" secondAttribute="top" id="4Z9-Wh-d72"/>
                             <constraint firstItem="R3n-Qy-I2r" firstAttribute="top" secondItem="RTB-ro-TR5" secondAttribute="top" id="8CR-FC-Blu"/>
                             <constraint firstItem="NiN-dK-qLM" firstAttribute="leading" secondItem="r9f-VT-Vq5" secondAttribute="leading" id="FDG-Jm-Lc1"/>
+                            <constraint firstItem="MJi-72-Rw2" firstAttribute="centerX" secondItem="RTB-ro-TR5" secondAttribute="centerX" id="Vga-ts-yH2"/>
+                            <constraint firstItem="r9f-VT-Vq5" firstAttribute="bottom" secondItem="qg9-VX-Rr1" secondAttribute="bottom" constant="5" id="Xp3-Ki-ACu"/>
+                            <constraint firstItem="FpC-g3-6a7" firstAttribute="top" secondItem="RTB-ro-TR5" secondAttribute="top" id="YYM-IA-WVJ"/>
                             <constraint firstItem="NiN-dK-qLM" firstAttribute="trailing" secondItem="r9f-VT-Vq5" secondAttribute="trailing" id="Z6X-it-jyM"/>
+                            <constraint firstItem="FpC-g3-6a7" firstAttribute="leading" secondItem="r9f-VT-Vq5" secondAttribute="leading" id="ilR-N5-ttl"/>
+                            <constraint firstItem="FpC-g3-6a7" firstAttribute="bottom" secondItem="r9f-VT-Vq5" secondAttribute="bottom" id="k0j-Yn-Tlu"/>
+                            <constraint firstItem="MJi-72-Rw2" firstAttribute="centerY" secondItem="RTB-ro-TR5" secondAttribute="centerY" id="odX-nt-6k8"/>
                             <constraint firstItem="R3n-Qy-I2r" firstAttribute="trailing" secondItem="r9f-VT-Vq5" secondAttribute="trailing" id="ofG-2n-kig"/>
+                            <constraint firstItem="r9f-VT-Vq5" firstAttribute="trailing" secondItem="qg9-VX-Rr1" secondAttribute="trailing" constant="5" id="px8-TW-D4X"/>
                             <constraint firstItem="R3n-Qy-I2r" firstAttribute="leading" secondItem="r9f-VT-Vq5" secondAttribute="leading" id="tC3-iH-1lL"/>
                             <constraint firstItem="NiN-dK-qLM" firstAttribute="bottom" secondItem="r9f-VT-Vq5" secondAttribute="bottom" id="tKg-lS-gFc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r9f-VT-Vq5"/>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="MJi-72-Rw2" id="UrJ-2X-NW5"/>
+                        <outlet property="navDrawerPopupWidthConstraint" destination="AgJ-ER-Do1" id="bUD-Uw-X4i"/>
+                        <outlet property="parentView" destination="RTB-ro-TR5" id="uY7-p4-A62"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lxM-op-Nb0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816.79999999999995" y="120.98950524737631"/>
+            <point key="canvasLocation" x="944.79999999999995" y="120.98950524737631"/>
         </scene>
     </scenes>
     <resources>
+        <image name="GrouphamburgerButon" width="35" height="21"/>
         <image name="Path 2logo" width="181" height="107"/>
+        <image name="Rectangle Copy 2slideBack" width="267" height="553"/>
         <image name="Rectanglebackground" width="325" height="553"/>
         <image name="RectanglenavBack" width="312" height="72"/>
     </resources>
