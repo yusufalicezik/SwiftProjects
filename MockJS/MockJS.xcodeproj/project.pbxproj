@@ -17,6 +17,7 @@
 		48C684D5227F74D600DD7D4D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C684D4227F74D600DD7D4D /* DataService.swift */; };
 		48C684D7227F75D100DD7D4D /* Sabitler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C684D6227F75D100DD7D4D /* Sabitler.swift */; };
 		48C684D9227F7DB700DD7D4D /* CurrentUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C684D8227F7DB700DD7D4D /* CurrentUserDefaults.swift */; };
+		48C684DB227F859900DD7D4D /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C684DA227F859900DD7D4D /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		48C684D4227F74D600DD7D4D /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		48C684D6227F75D100DD7D4D /* Sabitler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sabitler.swift; sourceTree = "<group>"; };
 		48C684D8227F7DB700DD7D4D /* CurrentUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserDefaults.swift; sourceTree = "<group>"; };
+		48C684DA227F859900DD7D4D /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		7862C4C08DEACC907B232CF1 /* Pods_MockJS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MockJS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2EF0348BD2C3BC6E5B98834 /* Pods-MockJS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockJS.release.xcconfig"; path = "Target Support Files/Pods-MockJS/Pods-MockJS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				48C684BA227F6CB000DD7D4D /* ViewController.swift */,
+				48C684DA227F859900DD7D4D /* HomeVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48C684D9227F7DB700DD7D4D /* CurrentUserDefaults.swift in Sources */,
+				48C684DB227F859900DD7D4D /* HomeVC.swift in Sources */,
 				48C684BB227F6CB000DD7D4D /* ViewController.swift in Sources */,
 				48C684D5227F74D600DD7D4D /* DataService.swift in Sources */,
 				48C684B9227F6CB000DD7D4D /* AppDelegate.swift in Sources */,

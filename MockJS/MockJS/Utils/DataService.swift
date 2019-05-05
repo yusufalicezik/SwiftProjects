@@ -46,6 +46,14 @@ class DataService {
     }
     
     
+    func kullaniciKaydiYap(_ username:String, _ password:String){
+        let params = ["username":username, "password":password, "profile_image":username]
+        Alamofire.request(BASE_URL+USERS, method: .post, parameters: params).responseJSON { (response) in
+            if response.result.isSuccess {
+                print("ekleme basarili")
+            }
+        }
+    }
     
     
 }
