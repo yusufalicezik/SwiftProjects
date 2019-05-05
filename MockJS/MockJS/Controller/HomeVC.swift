@@ -25,6 +25,14 @@ class HomeVC: UIViewController {
         let recognizerSola = UISwipeGestureRecognizer(target: self, action: #selector(navKapat))
         recognizerSola.direction = .left
         parentView.addGestureRecognizer(recognizerSola)
+        
+        let recognizerTouch = UITapGestureRecognizer(target: self, action: #selector(navKapat))
+        parentView.addGestureRecognizer(recognizerTouch)
+        
+        let recognizerSaga = UISwipeGestureRecognizer(target: self, action: #selector(navAc))
+        recognizerSaga.direction = .right
+        parentView.addGestureRecognizer(recognizerSaga)
+        
     }
     
     @objc func navKapat(){
@@ -34,6 +42,14 @@ class HomeVC: UIViewController {
         }
     }
 
+    @objc func navAc(){
+        navDrawerPopupWidthConstraint.constant = self.view.bounds.width - 50
+        UIView.animate(withDuration: 0.4) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    
     @IBAction func cikisYapButtonClicked(_ sender: Any) {
        CurrentUserDefaults.currentUser.userID=nil
        CurrentUserDefaults.currentUser.userName=nil
@@ -43,13 +59,7 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func hamburgerButtonClicked(_ sender: Any) {
-        navDrawerPopupWidthConstraint.constant = self.view.bounds.width - 50
-        UIView.animate(withDuration: 0.4) {
-            self.view.layoutIfNeeded()
-        }
+        navAc()
     }
-    
-}
-extension HomeVC : UIGestureRecognizerDelegate {
     
 }
