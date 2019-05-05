@@ -12,9 +12,16 @@ class HomeVC: UIViewController {
 
     @IBOutlet var parentView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var navDrawerPopupWidthConstraint: NSLayoutConstraint!
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         swipeEkle()
         if let name = CurrentUserDefaults.currentUser.userName {
             nameLabel.text = name
@@ -54,12 +61,25 @@ class HomeVC: UIViewController {
        CurrentUserDefaults.currentUser.userID=nil
        CurrentUserDefaults.currentUser.userName=nil
        CurrentUserDefaults.currentUser.userImage=nil
-        print(CurrentUserDefaults.currentUser.userID)
+       
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func hamburgerButtonClicked(_ sender: Any) {
         navAc()
     }
+    
+}
+extension HomeVC : UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menu.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = menu[indexPath.row]
+        return cell
+    }
+    
     
 }
