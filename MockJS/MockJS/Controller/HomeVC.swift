@@ -33,8 +33,8 @@ class HomeVC: UIViewController {
         recognizerSola.direction = .left
         parentView.addGestureRecognizer(recognizerSola)
         
-        let recognizerTouch = UITapGestureRecognizer(target: self, action: #selector(navKapat))
-        parentView.addGestureRecognizer(recognizerTouch)
+       /* let recognizerTouch = UITapGestureRecognizer(target: self, action: #selector(navKapat))
+        parentView.addGestureRecognizer(recognizerTouch)*/
         
         let recognizerSaga = UISwipeGestureRecognizer(target: self, action: #selector(navAc))
         recognizerSaga.direction = .right
@@ -78,7 +78,13 @@ extension HomeVC : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.textLabel?.text = menu[indexPath.row]
+        cell.backgroundColor = .clear
+        cell.textLabel?.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     
