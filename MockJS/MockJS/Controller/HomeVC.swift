@@ -12,9 +12,16 @@ class HomeVC: UIViewController {
 
     @IBOutlet var parentView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var navDrawerPopupWidthConstraint: NSLayoutConstraint!
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
         swipeEkle()
         if let name = CurrentUserDefaults.currentUser.userName {
             nameLabel.text = name
@@ -26,8 +33,8 @@ class HomeVC: UIViewController {
         recognizerSola.direction = .left
         parentView.addGestureRecognizer(recognizerSola)
         
-        let recognizerTouch = UITapGestureRecognizer(target: self, action: #selector(navKapat))
-        parentView.addGestureRecognizer(recognizerTouch)
+       /* let recognizerTouch = UITapGestureRecognizer(target: self, action: #selector(navKapat))
+        parentView.addGestureRecognizer(recognizerTouch)*/
         
         let recognizerSaga = UISwipeGestureRecognizer(target: self, action: #selector(navAc))
         recognizerSaga.direction = .right
@@ -54,12 +61,31 @@ class HomeVC: UIViewController {
        CurrentUserDefaults.currentUser.userID=nil
        CurrentUserDefaults.currentUser.userName=nil
        CurrentUserDefaults.currentUser.userImage=nil
-        print(CurrentUserDefaults.currentUser.userID)
+       
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func hamburgerButtonClicked(_ sender: Any) {
         navAc()
     }
+    
+}
+extension HomeVC : UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menu.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = menu[indexPath.row]
+        cell.backgroundColor = .clear
+        cell.textLabel?.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     
 }
