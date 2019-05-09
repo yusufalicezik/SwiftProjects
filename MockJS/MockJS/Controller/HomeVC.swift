@@ -14,7 +14,6 @@ class HomeVC: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var navDrawerPopupWidthConstraint: NSLayoutConstraint!
     
    
@@ -85,6 +84,11 @@ extension HomeVC : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row == 0 {
+            let mapVC = storyboard?.instantiateViewController(withIdentifier: "MapVC")
+            self.present(mapVC!, animated: true, completion: nil)
+            
+        }
     }
     
     

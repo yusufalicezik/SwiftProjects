@@ -11,4 +11,4 @@ import Foundation
 let BASE_URL = "https://5ccf34245b71f40014dc0c16.mockapi.io/"
 let USERS = "users"
 
-let menu = ["Profil", "Ayarlar","Çıkış"]
+let menu = ["Harita", "Profil","Çıkış"]

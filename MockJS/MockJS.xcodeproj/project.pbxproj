@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		41731F1F49B6046BC38222E4 /* Pods_MockJS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7862C4C08DEACC907B232CF1 /* Pods_MockJS.framework */; };
+		48AE5CB02284AF21000596DF /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AE5CAF2284AF21000596DF /* MapVC.swift */; };
+		48AE5CB32284AFF4000596DF /* CustomXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48AE5CB12284AFF3000596DF /* CustomXib.xib */; };
+		48AE5CB42284AFF4000596DF /* CustomXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AE5CB22284AFF3000596DF /* CustomXib.swift */; };
 		48C684B9227F6CB000DD7D4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C684B8227F6CB000DD7D4D /* AppDelegate.swift */; };
 		48C684BB227F6CB000DD7D4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C684BA227F6CB000DD7D4D /* ViewController.swift */; };
 		48C684BE227F6CB000DD7D4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C684BC227F6CB000DD7D4D /* Main.storyboard */; };
@@ -22,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		1FC9EF27DC20EA9235133022 /* Pods-MockJS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockJS.debug.xcconfig"; path = "Target Support Files/Pods-MockJS/Pods-MockJS.debug.xcconfig"; sourceTree = "<group>"; };
+		48AE5CAF2284AF21000596DF /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		48AE5CB12284AFF3000596DF /* CustomXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomXib.xib; path = ../../../XibCustomPin/XibCustomPin/CustomXib.xib; sourceTree = "<group>"; };
+		48AE5CB22284AFF3000596DF /* CustomXib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomXib.swift; path = ../../../XibCustomPin/XibCustomPin/CustomXib.swift; sourceTree = "<group>"; };
 		48C684B5227F6CB000DD7D4D /* MockJS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MockJS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C684B8227F6CB000DD7D4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48C684BA227F6CB000DD7D4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +93,7 @@
 			children = (
 				48C684BA227F6CB000DD7D4D /* ViewController.swift */,
 				48C684DA227F859900DD7D4D /* HomeVC.swift */,
+				48AE5CAF2284AF21000596DF /* MapVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -94,6 +101,8 @@
 		48C684CB227F6E7500DD7D4D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				48AE5CB22284AFF3000596DF /* CustomXib.swift */,
+				48AE5CB12284AFF3000596DF /* CustomXib.xib */,
 				48C684D0227F6F6700DD7D4D /* CustomTextField.swift */,
 			);
 			path = View;
@@ -211,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48AE5CB32284AFF4000596DF /* CustomXib.xib in Resources */,
 				48C684C3227F6CB200DD7D4D /* LaunchScreen.storyboard in Resources */,
 				48C684C0227F6CB200DD7D4D /* Assets.xcassets in Resources */,
 				48C684BE227F6CB000DD7D4D /* Main.storyboard in Resources */,
@@ -278,8 +288,10 @@
 				48C684D9227F7DB700DD7D4D /* CurrentUserDefaults.swift in Sources */,
 				48C684DB227F859900DD7D4D /* HomeVC.swift in Sources */,
 				48C684BB227F6CB000DD7D4D /* ViewController.swift in Sources */,
+				48AE5CB42284AFF4000596DF /* CustomXib.swift in Sources */,
 				48C684D5227F74D600DD7D4D /* DataService.swift in Sources */,
 				48C684B9227F6CB000DD7D4D /* AppDelegate.swift in Sources */,
+				48AE5CB02284AF21000596DF /* MapVC.swift in Sources */,
 				48C684D7227F75D100DD7D4D /* Sabitler.swift in Sources */,
 				48C684D1227F6F6700DD7D4D /* CustomTextField.swift in Sources */,
 			);
