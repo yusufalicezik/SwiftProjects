@@ -221,6 +221,68 @@
             </objects>
             <point key="canvasLocation" x="887.20000000000005" y="120.98950524737631"/>
         </scene>
+        <!--MapVC-->
+        <scene sceneID="tn2-Kx-wLs">
+            <objects>
+                <viewController storyboardIdentifier="MapVC" id="i3y-Za-kDL" customClass="MapVC" customModule="MockJS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uOu-hs-Jtr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jb-4n-CUm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RectanglenavBack" translatesAutoresizingMaskIntoConstraints="NO" id="zrT-gE-F8g">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QyC-0q-KHV">
+                                        <rect key="frame" x="16" y="23" width="50" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="A68-4k-pIf"/>
+                                            <constraint firstAttribute="height" constant="29" id="Xg9-IF-kGQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                        <state key="normal" title="&lt; Geri"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="i3y-Za-kDL" eventType="touchUpInside" id="DIh-th-URx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="zrT-gE-F8g" firstAttribute="top" secondItem="4jb-4n-CUm" secondAttribute="top" id="4iO-dl-yCJ"/>
+                                    <constraint firstAttribute="height" constant="72" id="FwG-XU-5hq"/>
+                                    <constraint firstAttribute="bottom" secondItem="QyC-0q-KHV" secondAttribute="bottom" constant="20" id="Hd4-HO-zK6"/>
+                                    <constraint firstAttribute="bottom" secondItem="zrT-gE-F8g" secondAttribute="bottom" id="c6h-py-Y7P"/>
+                                    <constraint firstAttribute="trailing" secondItem="zrT-gE-F8g" secondAttribute="trailing" id="r56-Ad-ZSt"/>
+                                    <constraint firstItem="QyC-0q-KHV" firstAttribute="leading" secondItem="4jb-4n-CUm" secondAttribute="leading" constant="16" id="s9f-Nk-yBj"/>
+                                    <constraint firstItem="zrT-gE-F8g" firstAttribute="leading" secondItem="4jb-4n-CUm" secondAttribute="leading" id="yHI-df-TXR"/>
+                                </constraints>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpH-1k-3s8">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4jb-4n-CUm" firstAttribute="top" secondItem="uOu-hs-Jtr" secondAttribute="top" id="3L1-yq-DrK"/>
+                            <constraint firstItem="4jb-4n-CUm" firstAttribute="trailing" secondItem="lNq-ME-X6o" secondAttribute="trailing" id="9Gx-Ol-Bi7"/>
+                            <constraint firstItem="cpH-1k-3s8" firstAttribute="top" secondItem="4jb-4n-CUm" secondAttribute="bottom" id="YPQ-Oo-rkY"/>
+                            <constraint firstItem="cpH-1k-3s8" firstAttribute="bottom" secondItem="lNq-ME-X6o" secondAttribute="bottom" id="axl-pb-0k1"/>
+                            <constraint firstItem="4jb-4n-CUm" firstAttribute="leading" secondItem="lNq-ME-X6o" secondAttribute="leading" id="h4t-Uk-bLD"/>
+                            <constraint firstItem="cpH-1k-3s8" firstAttribute="leading" secondItem="lNq-ME-X6o" secondAttribute="leading" id="hfX-0H-iuV"/>
+                            <constraint firstItem="cpH-1k-3s8" firstAttribute="trailing" secondItem="lNq-ME-X6o" secondAttribute="trailing" id="u8E-Kw-tcc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lNq-ME-X6o"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="cpH-1k-3s8" id="jWw-Vr-82Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xCZ-aj-VNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="120.98950524737631"/>
+        </scene>
     </scenes>
     <resources>
         <image name="GrouphamburgerButon" width="35" height="21"/>
