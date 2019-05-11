@@ -13,7 +13,7 @@ let THOUGHTS_REF = "thoughts"
 let CATEGORY = "category"
 let NUM_COMMENTS = "numComments"
 let NUM_LIKES = "numLikes"
-let THOUGHTS_TXT = "thoughtsTxt"
+let THOUGHTS_TXT = "thoughtTxt"
 let TIMESTAMP = "timestamp"
 let USERNAME = "username"
 
