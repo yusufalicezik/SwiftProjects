@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z9f-ji-ZbT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--RNDM-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="RNDM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="RNDM" id="CLb-6q-sVo">
+                        <barButtonItem key="rightBarButtonItem" image="addThoughtIcon" id="R9V-ri-67u">
+                            <connections>
+                                <segue destination="PNb-mg-H4N" kind="show" id="ej1-Pj-u5S"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="-697"/>
+        </scene>
+        <!--Add ThoughtVC-->
+        <scene sceneID="MPj-KX-FIz">
+            <objects>
+                <viewController id="PNb-mg-H4N" customClass="AddThoughtVC" customModule="RNDM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8et-nj-Qay">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zEd-Es-HIH">
+                                <rect key="frame" x="20" y="94" width="335" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Ddj-Lw-fie"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Eğlenceli"/>
+                                    <segment title="Ciddi"/>
+                                    <segment title="Çılgın"/>
+                                </segments>
+                                <color key="tintColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.047058823530000002" alpha="0.73975278249999998" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="categoryChanged:" destination="PNb-mg-H4N" eventType="valueChanged" id="b8m-ET-Cqq"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kullanıcı adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Xl-cd-Hq7">
+                                <rect key="frame" x="20" y="142" width="335" height="21"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Pxo-jE-6jV">
+                                <rect key="frame" x="20" y="175" width="335" height="110"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.13824379280821919" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="BAv-Uv-xmt"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXz-n4-gtV">
+                                <rect key="frame" x="137.5" y="305" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.047058823530000002" alpha="0.73975278249999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="T6U-Un-0eK"/>
+                                    <constraint firstAttribute="width" constant="100" id="sjR-5G-awU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Gönder">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="postButtonClicked:" destination="PNb-mg-H4N" eventType="touchUpInside" id="PhJ-eG-OQn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nEb-Wv-KF6" firstAttribute="trailing" secondItem="2Xl-cd-Hq7" secondAttribute="trailing" constant="20" id="3sw-3O-J9B"/>
+                            <constraint firstItem="Pxo-jE-6jV" firstAttribute="top" secondItem="2Xl-cd-Hq7" secondAttribute="bottom" constant="12" id="8O4-Sg-4Gc"/>
+                            <constraint firstItem="nEb-Wv-KF6" firstAttribute="trailing" secondItem="Pxo-jE-6jV" secondAttribute="trailing" constant="20" id="8u5-Y9-unp"/>
+                            <constraint firstItem="zEd-Es-HIH" firstAttribute="leading" secondItem="nEb-Wv-KF6" secondAttribute="leading" constant="20" id="Aks-yO-qYB"/>
+                            <constraint firstItem="tXz-n4-gtV" firstAttribute="top" secondItem="Pxo-jE-6jV" secondAttribute="bottom" constant="20" id="BO6-kq-NYa"/>
+                            <constraint firstItem="2Xl-cd-Hq7" firstAttribute="leading" secondItem="nEb-Wv-KF6" secondAttribute="leading" constant="20" id="BRq-DP-zcw"/>
+                            <constraint firstItem="2Xl-cd-Hq7" firstAttribute="top" secondItem="zEd-Es-HIH" secondAttribute="bottom" constant="15" id="KUh-Ei-kIX"/>
+                            <constraint firstItem="tXz-n4-gtV" firstAttribute="centerX" secondItem="8et-nj-Qay" secondAttribute="centerX" id="jcn-4O-xzC"/>
+                            <constraint firstItem="zEd-Es-HIH" firstAttribute="top" secondItem="nEb-Wv-KF6" secondAttribute="top" constant="30" id="klj-WP-VuU"/>
+                            <constraint firstItem="Pxo-jE-6jV" firstAttribute="leading" secondItem="nEb-Wv-KF6" secondAttribute="leading" constant="20" id="oxk-XM-E20"/>
+                            <constraint firstItem="nEb-Wv-KF6" firstAttribute="trailing" secondItem="zEd-Es-HIH" secondAttribute="trailing" constant="20" id="sEZ-zy-p0W"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nEb-Wv-KF6"/>
+                    </view>
+                    <connections>
+                        <outlet property="categorySegment" destination="zEd-Es-HIH" id="FKm-Ci-bv2"/>
+                        <outlet property="postButton" destination="tXz-n4-gtV" id="51p-l6-3w4"/>
+                        <outlet property="thoughtText" destination="Pxo-jE-6jV" id="sng-R2-fyJ"/>
+                        <outlet property="usernameTxt" destination="2Xl-cd-Hq7" id="TZE-yw-oh6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yZC-0W-PEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="-697.60119940029995"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QQP-qB-iww">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z9f-ji-ZbT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="akY-Mf-jiY">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.96470588239999999" green="0.65098039220000004" blue="0.13725490200000001" alpha="0.73975278249999998" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="0.85046553938356162" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96078431372549022" green="0.50980392156862742" blue="0.047058823529411764" alpha="0.73975278249999998" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jGO-AT-nsF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ZS-mb-JFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="-696"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="addThoughtIcon" width="21" height="24"/>
+    </resources>
+</document>

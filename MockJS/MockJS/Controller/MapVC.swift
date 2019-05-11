@@ -16,7 +16,7 @@ class MapVC: UIViewController,UIGestureRecognizerDelegate {
     var  customView = Bundle.main.loadNibNamed("CustomXib", owner: self, options: nil)?.first as! CustomXib
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+       mapView.delegate = self
         addDoubleTab()
         
        
@@ -67,5 +67,31 @@ class MapVC: UIViewController,UIGestureRecognizerDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    
 
+}
+
+extension MapVC : MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        print("değişti")
+        
+        
+        customView.layer.cornerRadius = 10
+        for an in mapView.annotations {
+            
+            let region : MKCoordinateRegion = MKCoordinateRegion(MKMapRect(x: Double(customView.layer.position.x), y: Double(customView.layer.position.x), width: Double(customView.frame.width), height: Double(customView.frame.height)))
+            
+            
+            let touch = mapView.convert(region, toRectTo: mapView)
+            
+            
+            
+            
+            customView.frame = touch
+            
+            self.view.addSubview(customView)
+        
+        }
+    }
 }
