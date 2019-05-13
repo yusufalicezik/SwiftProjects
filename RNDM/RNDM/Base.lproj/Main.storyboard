@@ -99,6 +99,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="likesImage" destination="gBa-lI-JsK" id="X2a-wg-YyW"/>
+                                            <outlet property="likesLabel" destination="hJX-FT-PYK" id="8ZI-wA-vnc"/>
                                             <outlet property="likesNumberLabel" destination="hJX-FT-PYK" id="arY-j5-nWO"/>
                                             <outlet property="thoughtTxtLabel" destination="XQk-br-sdA" id="GkN-yb-fYu"/>
                                             <outlet property="timestampLabel" destination="foY-hN-3Ol" id="UV0-rU-xxA"/>
