@@ -14,7 +14,7 @@ enum ThoughtCategory : String {
     case ciddi = "ciddi"
     case eglenceli = "eğlenceli"
     case cilgin = "çılgın"
-    case popular = "popular"
+    case popular = "popüler"
 }
 
 class MainVC: UIViewController {
@@ -24,9 +24,11 @@ class MainVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
+    
     private var thoughts = [Thought]()
     private var thoughtsCollectionRef : CollectionReference!
     private var thoughtsListener : ListenerRegistration!
+    private var selectedCategory = ThoughtCategory.eglenceli.rawValue
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,40 +42,103 @@ class MainVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        thoughts=[]
-        //
-        thoughtsListener = thoughtsCollectionRef.addSnapshotListener { (snapshot, error) in
-            if let _ = error {
-                print("error fethcing docs")
-            }else{
-                
-                guard let snap = snapshot else {return}
-                for document in snap.documents {
-                    let data = document.data()
-                    let username = data[USERNAME] as? String ?? "Anonymous"
-                    let timestamp = data[TIMESTAMP] as? Date ?? Date()
-                    let thoughtText = data[THOUGHTS_TXT] as? String ?? ""
-                    let numLikes = data[NUM_LIKES] as? Int ?? 0
-                    let numComments = data[NUM_COMMENTS] as? Int ?? 0
-                    let documentID = document.documentID
-                    
-                    let tempThought = Thought(username: username, timestamp: timestamp, thoughtTxt: thoughtText, numLikes: numLikes, numComments: numComments, documentID: documentID)
-                    
-                    self.thoughts.append(tempThought)
-                }
-                self.tableView.reloadData()
-            }
-        }
+       setListener()
         
 
     }
+    
+    
+    func setListener(){
+       
+        //
+        
+        
+        if selectedCategory == ThoughtCategory.popular.rawValue {
+             thoughts=[]
+            thoughtsListener = thoughtsCollectionRef
+                .order(by: NUM_LIKES, descending: true)
+                .addSnapshotListener { (snapshot, error) in
+                    if let _ = error {
+                        print("error fethcing docs")
+                    }else{
+                        
+                        guard let snap = snapshot else {return}
+                        for document in snap.documents {
+                            let data = document.data()
+                            let username = data[USERNAME] as? String ?? "Anonymous"
+                            //let timestamp = data[TIMESTAMP] as? Date ?? Date()
+                            let thoughtText = data[THOUGHTS_TXT] as? String ?? ""
+                            let timestampDt = data[TIMESTAMP] as? Timestamp ?? Timestamp()
+                            let numLikes = data[NUM_LIKES] as? Int ?? 0
+                            let numComments = data[NUM_COMMENTS] as? Int ?? 0
+                            let documentID = document.documentID
+                            
+                            let date = Date(timeIntervalSince1970: TimeInterval(timestampDt.seconds))
+                            
+                            
+                            let tempThought = Thought(username: username, timestamp: date, thoughtTxt: thoughtText, numLikes: numLikes, numComments: numComments, documentID: documentID)
+                            
+                            self.thoughts.append(tempThought)
+                        }
+                        self.tableView.reloadData()
+                    }
+            }
+        }else{
+        thoughts=[]
+        thoughtsListener = thoughtsCollectionRef.whereField(CATEGORY, isEqualTo: selectedCategory)
+            .order(by: TIMESTAMP, descending: true)
+            .addSnapshotListener { (snapshot, error) in
+                if let _ = error {
+                    print("error fethcing docs")
+                }else{
+                    
+                    guard let snap = snapshot else {return}
+                    for document in snap.documents {
+                        let data = document.data()
+                        let username = data[USERNAME] as? String ?? "Anonymous"
+                        //let timestamp = data[TIMESTAMP] as? Date ?? Date()
+                        let thoughtText = data[THOUGHTS_TXT] as? String ?? ""
+                        let timestampDt = data[TIMESTAMP] as? Timestamp ?? Timestamp()
+                        let numLikes = data[NUM_LIKES] as? Int ?? 0
+                        let numComments = data[NUM_COMMENTS] as? Int ?? 0
+                        let documentID = document.documentID
+                        
+                        let date = Date(timeIntervalSince1970: TimeInterval(timestampDt.seconds))
+                        
+                        
+                        let tempThought = Thought(username: username, timestamp: date, thoughtTxt: thoughtText, numLikes: numLikes, numComments: numComments, documentID: documentID)
+                        
+                        self.thoughts.append(tempThought)
+                    }
+                    self.tableView.reloadData()
+                }
+            }
+        }
+    }
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         thoughtsListener.remove()
     }
 
     @IBAction func categorySegmentChanged(_ sender: Any) {
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            selectedCategory = ThoughtCategory.eglenceli.rawValue
+        case 1:
+            selectedCategory = ThoughtCategory.ciddi.rawValue
+        case 2:
+            selectedCategory = ThoughtCategory.cilgin.rawValue
+        case 3:
+            selectedCategory = ThoughtCategory.popular.rawValue
+        default :
+            selectedCategory = ThoughtCategory.eglenceli.rawValue
+
+        }
         
+        
+        thoughtsListener.remove()
+        setListener()
     }
     
 }
