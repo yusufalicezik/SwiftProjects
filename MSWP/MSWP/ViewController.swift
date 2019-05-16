@@ -56,7 +56,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         slideScrollView.contentSize = CGSize(width: (self.view.frame.width * CGFloat(slides.count)), height: self.view.frame.height - 50)
         
         for i in 0..<slides.count {
-            slides[i].frame = CGRect(x: self.view.frame.width * CGFloat(i), y: 0, width: self.view.frame.width, height: self.view.frame.height-50)
+            slides[i].frame = CGRect(x: self.view.frame.width * CGFloat(i), y: 0, width: self.view.frame.width, height: self.view.frame.height-0)
             slideScrollView.addSubview(slides[i])
         }
     }
@@ -71,7 +71,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         let maxX = slideScrollView.contentSize.width - slideScrollView.frame.width
         let newX = CGFloat(Int(pageControl.currentPage) + 1) * slideScrollView.frame.width
         if newX <= maxX {
-            pageControl.currentPage = pageControl.currentPage + 1
+            //pageControl.currentPage = pageControl.currentPage + 1 zaten default olarak scrollViewDidScroll çalıştığında değişiyor, setContentOffsette orası tetiklendiğinden
             slideScrollView.setContentOffset(CGPoint(x: newX, y: 0), animated: true)
         }
 

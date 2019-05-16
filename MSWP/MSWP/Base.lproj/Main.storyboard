@@ -18,17 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="dCJ-JV-4H1">
-                                <rect key="frame" x="168" y="615" width="39" height="37"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="pageIndicatorTintColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="0.85046553940000003" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.047058823530000002" alpha="0.73975278249999998" colorSpace="calibratedRGB"/>
-                            </pageControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" ambiguous="YES" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQT-5O-rGL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQT-5O-rGL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3n-pZ-IzO">
-                                <rect key="frame" x="309" y="612" width="60" height="40"/>
+                                <rect key="frame" x="309" y="622" width="60" height="40"/>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.047058823530000002" alpha="0.73975278249999998" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="RrH-rZ-pPM"/>
@@ -42,14 +36,22 @@
                                     <action selector="ileriButtonClicked:" destination="V5n-SP-W0K" eventType="touchUpInside" id="fN5-q4-O0v"/>
                                 </connections>
                             </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="dCJ-JV-4H1">
+                                <rect key="frame" x="168" y="622" width="39" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="pageIndicatorTintColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="0.85046553940000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.047058823530000002" alpha="0.73975278249999998" colorSpace="calibratedRGB"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.26874780654907227" green="0.46066683530807495" blue="0.56725811958312988" alpha="0.72915774828767121" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dQT-5O-rGL" firstAttribute="top" secondItem="6O9-SR-uf7" secondAttribute="top" id="BWr-C1-peh"/>
+                            <constraint firstItem="dCJ-JV-4H1" firstAttribute="centerX" secondItem="6O9-SR-uf7" secondAttribute="centerX" id="Dtg-1D-65P"/>
                             <constraint firstItem="dQT-5O-rGL" firstAttribute="leading" secondItem="wrD-i5-dJT" secondAttribute="leading" id="Hfw-2N-UNe"/>
-                            <constraint firstItem="dCJ-JV-4H1" firstAttribute="centerX" secondItem="6O9-SR-uf7" secondAttribute="centerX" id="I7e-Xn-m9C"/>
-                            <constraint firstItem="wrD-i5-dJT" firstAttribute="bottom" secondItem="dCJ-JV-4H1" secondAttribute="bottom" constant="15" id="acN-JN-4VE"/>
-                            <constraint firstItem="wrD-i5-dJT" firstAttribute="bottom" secondItem="O3n-pZ-IzO" secondAttribute="bottom" constant="15" id="hup-Od-Urd"/>
+                            <constraint firstItem="dCJ-JV-4H1" firstAttribute="top" secondItem="dQT-5O-rGL" secondAttribute="bottom" constant="5" id="ONC-Q9-IrP"/>
+                            <constraint firstItem="wrD-i5-dJT" firstAttribute="bottom" secondItem="dCJ-JV-4H1" secondAttribute="bottom" constant="5" id="VmS-M8-ZhX"/>
+                            <constraint firstItem="wrD-i5-dJT" firstAttribute="bottom" secondItem="O3n-pZ-IzO" secondAttribute="bottom" constant="5" id="hup-Od-Urd"/>
+                            <constraint firstItem="O3n-pZ-IzO" firstAttribute="top" secondItem="dQT-5O-rGL" secondAttribute="bottom" constant="5" id="iSf-mF-iu6"/>
                             <constraint firstItem="wrD-i5-dJT" firstAttribute="trailing" secondItem="O3n-pZ-IzO" secondAttribute="trailing" constant="6" id="ncK-rJ-0s4"/>
                             <constraint firstItem="dQT-5O-rGL" firstAttribute="trailing" secondItem="wrD-i5-dJT" secondAttribute="trailing" id="tka-ph-cUg"/>
                         </constraints>
@@ -62,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NoB-Bu-tPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2706.4000000000001" y="-375.56221889055473"/>
+            <point key="canvasLocation" x="2705.625" y="-376.05633802816902"/>
         </scene>
     </scenes>
 </document>
