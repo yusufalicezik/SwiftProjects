@@ -178,7 +178,7 @@
             <objects>
                 <viewController storyboardIdentifier="KayitVC" id="FC9-Ec-jxd" customClass="KayitVC" customModule="Wots" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="thb-OT-ZdB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ld-Jh-DrY">
@@ -215,13 +215,13 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yif-h9-krQ">
-                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
+                                <rect key="frame" x="0.0" y="65" width="375" height="735"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIX-5T-0Gp">
-                                        <rect key="frame" x="0.0" y="0.0" width="384" height="604"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="737"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="oS2-mZ-IG3">
-                                                <rect key="frame" x="20" y="8" width="344" height="284"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="oS2-mZ-IG3">
+                                                <rect key="frame" x="20" y="8" width="344" height="564"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ad Soyad" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q8u-qT-J7B">
                                                         <rect key="frame" x="0.0" y="0.0" width="344" height="44"/>
@@ -234,7 +234,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-posta" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KEh-4M-oEC">
-                                                        <rect key="frame" x="0.0" y="48" width="344" height="44"/>
+                                                        <rect key="frame" x="0.0" y="104" width="344" height="44"/>
                                                         <color key="backgroundColor" red="0.34901960780000002" green="0.3803921569" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="bHz-u4-lpl"/>
@@ -244,7 +244,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kullanıcı Adı" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IrT-uf-cgB">
-                                                        <rect key="frame" x="0.0" y="96" width="344" height="44"/>
+                                                        <rect key="frame" x="0.0" y="208" width="344" height="44"/>
                                                         <color key="backgroundColor" red="0.34901960780000002" green="0.3803921569" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="FXE-qF-IEe"/>
@@ -254,7 +254,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Şifre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kh3-ji-r3J">
-                                                        <rect key="frame" x="0.0" y="144" width="344" height="44"/>
+                                                        <rect key="frame" x="0.0" y="312" width="344" height="44"/>
                                                         <color key="backgroundColor" red="0.34901960780000002" green="0.3803921569" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="187-ao-Vud"/>
@@ -264,7 +264,7 @@
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Şifre Tekrar" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1bK-CE-5Gz">
-                                                        <rect key="frame" x="0.0" y="192" width="344" height="44"/>
+                                                        <rect key="frame" x="0.0" y="416" width="344" height="44"/>
                                                         <color key="backgroundColor" red="0.34901960780000002" green="0.3803921569" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="cdD-qD-uy8"/>
@@ -274,7 +274,7 @@
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNu-ba-HTr">
-                                                        <rect key="frame" x="0.0" y="240" width="344" height="44"/>
+                                                        <rect key="frame" x="0.0" y="520" width="344" height="44"/>
                                                         <color key="backgroundColor" red="0.34901960780000002" green="0.3803921569" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="fQi-65-mPL"/>
@@ -321,6 +321,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wsN-f6-riL"/>
                     </view>
+                    <size key="freeformSize" width="375" height="800"/>
                     <connections>
                         <outlet property="adSoyadTxtField" destination="q8u-qT-J7B" id="wul-1S-v6g"/>
                         <outlet property="constraintContentHeight" destination="RrX-P9-wSR" id="Lkz-Eb-tGo"/>
