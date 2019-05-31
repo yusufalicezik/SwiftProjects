@@ -10,5 +10,11 @@ import Foundation
 let BASE_URL = "https://5ccf34245b71f40014dc0c16.mockapi.io/"
 let USERS = "users"
 let POSTS = "posts"
+let MESSAGES = "messages"
+
 
 var images = [UIImage(named: "giris1"), UIImage(named: "giris2"), UIImage(named: "giris3")]
+
+
+
+
