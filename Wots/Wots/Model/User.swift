@@ -27,4 +27,13 @@ class User {
         self.name_surname = name_surname
         self.profile_image = profile_image
     }
+    
+    init(id:String, username:String, password:String, email:String, name_surname:String, profile_image:String) {
+        self.username = username
+        self.password = password
+        self.email = email
+        self.name_surname = name_surname
+        self.profile_image = profile_image
+        self.id = id
+    }
 }

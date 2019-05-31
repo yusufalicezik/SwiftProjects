@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4214F93588D99B8D2B50B6FE /* Pods_Wots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E076C674B474938DF0375B /* Pods_Wots.framework */; };
+		48011A8D229F7A93000CFFFE /* FetchingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48011A8C229F7A93000CFFFE /* FetchingService.swift */; };
+		48011A8F229F8DBF000CFFFE /* MessagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48011A8E229F8DBF000CFFFE /* MessagesCell.swift */; };
+		48011A91229F8EA2000CFFFE /* Mesaj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48011A90229F8EA2000CFFFE /* Mesaj.swift */; };
+		48011A93229F954B000CFFFE /* MessagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48011A92229F954B000CFFFE /* MessagesService.swift */; };
 		480639D82293585D00CD43C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480639D72293585D00CD43C7 /* User.swift */; };
 		4807B4AC228F698B007D0247 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807B4AB228F698B007D0247 /* Constants.swift */; };
 		4807B4AE228F69AF007D0247 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4807B4AD228F69AF007D0247 /* DataService.swift */; };
@@ -38,6 +42,10 @@
 /* Begin PBXFileReference section */
 		20ECAC7F3B8EB2D76A740335 /* Pods-Wots.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wots.release.xcconfig"; path = "Target Support Files/Pods-Wots/Pods-Wots.release.xcconfig"; sourceTree = "<group>"; };
 		2CCAFBD00380FC91A789AFC8 /* Pods-Wots.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wots.debug.xcconfig"; path = "Target Support Files/Pods-Wots/Pods-Wots.debug.xcconfig"; sourceTree = "<group>"; };
+		48011A8C229F7A93000CFFFE /* FetchingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchingService.swift; sourceTree = "<group>"; };
+		48011A8E229F8DBF000CFFFE /* MessagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesCell.swift; sourceTree = "<group>"; };
+		48011A90229F8EA2000CFFFE /* Mesaj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesaj.swift; sourceTree = "<group>"; };
+		48011A92229F954B000CFFFE /* MessagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesService.swift; sourceTree = "<group>"; };
 		480639D72293585D00CD43C7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4807B4AB228F698B007D0247 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4807B4AD228F69AF007D0247 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -86,6 +94,8 @@
 				4807B4AB228F698B007D0247 /* Constants.swift */,
 				4807B4AD228F69AF007D0247 /* DataService.swift */,
 				4807B4AF228F69C8007D0247 /* CurrentUserDefaults.swift */,
+				48011A8C229F7A93000CFFFE /* FetchingService.swift */,
+				48011A92229F954B000CFFFE /* MessagesService.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -96,8 +106,8 @@
 				48622CDD2298624B0003146C /* Post */,
 				4834C51D2294CEDF00D9843E /* Profil */,
 				483B4B9822910FB400966404 /* GenelMesajlarVC.swift */,
-				48FF43CE22921C4700A66C3D /* MesajVC.swift */,
 				48FF43D0229228F200A66C3D /* AraVC.swift */,
+				48FF43CE22921C4700A66C3D /* MesajVC.swift */,
 			);
 			path = KullaniciIslemler;
 			sourceTree = "<group>";
@@ -107,6 +117,7 @@
 			children = (
 				4807B4B4228F7025007D0247 /* PostCell.swift */,
 				483B4B9622910E9600966404 /* MessagesGenelCell.swift */,
+				48011A8E229F8DBF000CFFFE /* MessagesCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -186,6 +197,7 @@
 			children = (
 				480639D72293585D00CD43C7 /* User.swift */,
 				48622CE02298642B0003146C /* Post.swift */,
+				48011A90229F8EA2000CFFFE /* Mesaj.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -377,6 +389,7 @@
 				483B4B9722910E9600966404 /* MessagesGenelCell.swift in Sources */,
 				48FF43D1229228F200A66C3D /* AraVC.swift in Sources */,
 				4834C51F2294CEFC00D9843E /* ProfilAyarlarVC.swift in Sources */,
+				48011A8F229F8DBF000CFFFE /* MessagesCell.swift in Sources */,
 				48AB293D228DF7BB00B53E5B /* Slide.swift in Sources */,
 				480639D82293585D00CD43C7 /* User.swift in Sources */,
 				483B4B9922910FB400966404 /* GenelMesajlarVC.swift in Sources */,
@@ -384,12 +397,15 @@
 				4807B4B2228F6E7F007D0247 /* AnasayfaVC.swift in Sources */,
 				4807B4B0228F69C8007D0247 /* CurrentUserDefaults.swift in Sources */,
 				48AB2941228DFF5100B53E5B /* GirisVC.swift in Sources */,
+				48011A93229F954B000CFFFE /* MessagesService.swift in Sources */,
 				483B4B952290FADE00966404 /* ProfilVC.swift in Sources */,
 				48622CDF229862610003146C /* PaylasVC.swift in Sources */,
 				48FF43CF22921C4700A66C3D /* MesajVC.swift in Sources */,
 				48AB2926228DF54400B53E5B /* ViewController.swift in Sources */,
+				48011A91229F8EA2000CFFFE /* Mesaj.swift in Sources */,
 				48AB2924228DF54400B53E5B /* AppDelegate.swift in Sources */,
 				48622CE12298642B0003146C /* Post.swift in Sources */,
+				48011A8D229F7A93000CFFFE /* FetchingService.swift in Sources */,
 				4807B4AC228F698B007D0247 /* Constants.swift in Sources */,
 				4807B4B5228F7025007D0247 /* PostCell.swift in Sources */,
 			);
