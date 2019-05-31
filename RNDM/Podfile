@@ -9,4 +9,5 @@ target 'RNDM' do
    pod 'Firebase/Core'
 pod 'Firebase/Firestore'
 pod 'ProgressHUD'
+pod 'IQKeyboardManager'
 end
