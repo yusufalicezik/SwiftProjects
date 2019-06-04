@@ -42,7 +42,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Anasayfa" id="CAk-Yu-arT"/>
+                    <navigationItem key="navigationItem" title="Anasayfa" id="CAk-Yu-arT">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="gwW-4P-GNl">
+                            <connections>
+                                <action selector="buttonClicked:" destination="BYZ-38-t0r" id="s9Z-zb-5SQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -18,6 +18,9 @@ class ViewController: ButtonBarPagerTabStripViewController{
         let height = UIApplication.shared.statusBarFrame.height +
             self.navigationController!.navigationBar.frame.height
         buttonBarView.frame.origin.y = buttonBarView.frame.origin.y + height
+       
+        
+       // self.containerView.bounces = false
     }
     
     
@@ -26,9 +29,9 @@ class ViewController: ButtonBarPagerTabStripViewController{
         let child1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Child1VC")
         let child2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Child2VC")
         let child3 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Child3VC")
+       
         let child4 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ChildExVC")
-        
-        return [child1,child2,child3]
+        return [child1,child2,child3,child4]
     }
     
     
@@ -66,7 +69,10 @@ class ViewController: ButtonBarPagerTabStripViewController{
     }
     
     
-
+    @IBAction func buttonClicked(_ sender: Any) {
+        moveToViewController(at: 3)
+    }
+    
     
 }
 
