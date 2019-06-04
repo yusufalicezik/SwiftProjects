@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XLPagerTabStripExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1B-fn-Fkp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <color key="backgroundColor" red="0.27362363179999999" green="0.3803921569" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="wa6-ke-zt9"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Eu-uc-s9k">
+                                <rect key="frame" x="0.0" y="100" width="375" height="66"/>
+                                <color key="backgroundColor" red="0.27362363179999999" green="0.3803921569" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IFY-VJ-mxn">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Eu-uc-s9k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EXZ-wx-Z80"/>
+                            <constraint firstItem="W1B-fn-Fkp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OMN-be-sYf"/>
+                            <constraint firstItem="W1B-fn-Fkp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="T6R-rQ-a4X"/>
+                            <constraint firstItem="6Eu-uc-s9k" firstAttribute="top" secondItem="W1B-fn-Fkp" secondAttribute="bottom" id="VIk-Oc-NAs"/>
+                            <constraint firstItem="W1B-fn-Fkp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VhL-sg-nvm"/>
+                            <constraint firstItem="6Eu-uc-s9k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Zza-K9-Lsd"/>
+                            <constraint firstItem="6Eu-uc-s9k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cjq-RZ-iKb"/>
+                            <constraint firstItem="6Eu-uc-s9k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vSb-Xe-If1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071.2" y="120.98950524737631"/>
+        </scene>
+        <!--Child1VC-->
+        <scene sceneID="9c8-ST-6FR">
+            <objects>
+                <viewController storyboardIdentifier="Child1VC" id="e7m-tH-4KZ" customClass="Child1VC" customModule="XLPagerTabStripExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BMh-sZ-a3D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.90408283389999999" green="0.50196078430000002" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <viewLayoutGuide key="safeArea" id="IKp-92-R2o"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2m-fZ-fxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743.2" y="120.98950524737631"/>
+        </scene>
+        <!--Child2VC-->
+        <scene sceneID="KXu-VS-gHS">
+            <objects>
+                <viewController storyboardIdentifier="Child2VC" id="rZj-cR-iUb" customClass="Child2VC" customModule="XLPagerTabStripExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BA7-Dk-7Lm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.39741725080000001" green="0.70449044719999998" blue="0.41939667149999998" alpha="0.59808433220000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="LwE-IV-L82"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hf2-5g-YBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2412" y="120.98950524737631"/>
+        </scene>
+        <!--Child3VC-->
+        <scene sceneID="O45-oY-vd5">
+            <objects>
+                <viewController storyboardIdentifier="Child3VC" id="dVN-Bf-Ljc" customClass="Child3VC" customModule="XLPagerTabStripExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EEL-D4-3tr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.86666666670000003" alpha="0.63698630136986301" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="7pe-Yt-NDQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47W-k5-fcT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3060" y="120.98950524737631"/>
+        </scene>
+        <!--Child ExVC-->
+        <scene sceneID="Yc9-NG-0Ee">
+            <objects>
+                <viewController storyboardIdentifier="ChildExVC" id="WhE-tc-Smg" customClass="ChildExVC" customModule="XLPagerTabStripExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VlK-nx-JiX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Tml-1k-163"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sR1-zV-WND" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2329" y="-546"/>
+        </scene>
+    </scenes>
+</document>

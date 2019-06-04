@@ -1,0 +1,16 @@
+PODS:
+  - XLPagerTabStrip (8.1.1)
+
+DEPENDENCIES:
+  - XLPagerTabStrip
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  XLPagerTabStrip: 63166e21c9844fa30f2d95d30f335e73be5caf22
+
+PODFILE CHECKSUM: eff10241b31c9c2f6119d851bb861c892104944c
+
+COCOAPODS: 1.6.1
