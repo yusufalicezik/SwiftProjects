@@ -205,6 +205,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K0Z-UQ-DEG">
+                                <rect key="frame" x="8" y="510" width="359" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xLo-2V-HTt"/>
+                                </constraints>
+                                <state key="normal" title="Decodable İle Cek"/>
+                                <connections>
+                                    <action selector="decodableButtonClicked:" destination="wc4-of-WVn" eventType="touchUpInside" id="Cnf-fE-XrX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -212,6 +222,9 @@
                             <constraint firstItem="Zai-JC-M25" firstAttribute="leading" secondItem="gdl-PS-Mmt" secondAttribute="leading" constant="16" id="7pm-7X-LNS"/>
                             <constraint firstItem="DVe-ll-pcN" firstAttribute="trailing" secondItem="gdl-PS-Mmt" secondAttribute="trailing" id="Cja-Z4-K9w"/>
                             <constraint firstItem="DVe-ll-pcN" firstAttribute="top" secondItem="oKo-Y2-33I" secondAttribute="top" id="Eis-6K-dVN"/>
+                            <constraint firstItem="K0Z-UQ-DEG" firstAttribute="top" secondItem="Zai-JC-M25" secondAttribute="bottom" constant="50" id="Hac-Cm-bVz"/>
+                            <constraint firstItem="gdl-PS-Mmt" firstAttribute="trailing" secondItem="K0Z-UQ-DEG" secondAttribute="trailing" constant="8" id="HbW-cM-PwA"/>
+                            <constraint firstItem="K0Z-UQ-DEG" firstAttribute="leading" secondItem="gdl-PS-Mmt" secondAttribute="leading" constant="8" id="Lga-7n-nEd"/>
                             <constraint firstItem="2D5-oK-Kt7" firstAttribute="leading" secondItem="gdl-PS-Mmt" secondAttribute="leading" id="Wni-iz-DPb"/>
                             <constraint firstItem="Zai-JC-M25" firstAttribute="top" secondItem="2D5-oK-Kt7" secondAttribute="bottom" constant="20" id="bkk-JR-wq8"/>
                             <constraint firstItem="DVe-ll-pcN" firstAttribute="leading" secondItem="gdl-PS-Mmt" secondAttribute="leading" id="iMi-d7-og3"/>

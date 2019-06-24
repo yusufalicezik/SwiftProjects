@@ -55,12 +55,13 @@ class SecondVC: UIViewController {
         
         
     }
-
     @IBAction func backButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-    }
-    
 
+    }
+    @IBAction func decodableButtonClicked(_ sender: Any) {
+        //
+    }
 }
 extension SecondVC : DataDelegateSecondVc {
     func getSecondVCDataList(comment: Comment) {
@@ -75,11 +76,6 @@ extension SecondVC : DataDelegateSecondVc {
             }
         }
     }
-    
-    
-    
-   
-   
     
     
 }
