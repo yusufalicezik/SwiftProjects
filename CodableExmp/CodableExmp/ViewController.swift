@@ -19,22 +19,25 @@ class ViewController: UIViewController {
     }
     func verileriCek(){
         
-       
-        
-        let task = URLSession.shared.dataTask(with: url!) { data, response, error in
-            do {
-                let album = try JSONDecoder().decode([Album].self, from: data!)
-                print(album[0].title!)
-                print("************************")
-            
-            }catch{
-                print("hata")
+        DispatchQueue.main.async {
+            let task = URLSession.shared.dataTask(with: self.url!) { data, response, error in
+                do {
+                    let album = try JSONDecoder().decode([Album].self, from: data!)
+                    print(album[0].title!)
+                    print("************************")
+                    
+                }catch{
+                    print("hata")
+                }
+                
+                
             }
-            
-          
+            task.resume()
         }
         
-        task.resume()
+       
+        
+        
       
     }
     
