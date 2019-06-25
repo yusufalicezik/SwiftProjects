@@ -11,8 +11,8 @@ import CoreData
 
 class AddNewVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBOutlet weak var filmNameLabel: UITextField!
     @IBOutlet weak var heightCost: NSLayoutConstraint!
+    @IBOutlet weak var filmNameLabel: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
     var selectedCategory:String?
     @IBOutlet weak var posterImageView: UIImageView!
@@ -96,7 +96,15 @@ class AddNewVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         
     }
     @IBAction func cancelButtonClicked(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "VC") as! ViewController
+        let transition = CATransition()
+        transition.duration = 0.4
+        transition.type = CATransitionType.moveIn
+        
+        transition.subtype = CATransitionSubtype.fromLeft
+        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.default)
+        view.window!.layer.add(transition, forKey: kCATransition)
+        present(vc, animated: false, completion: nil)
     }
     
 }
