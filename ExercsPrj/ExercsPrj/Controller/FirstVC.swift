@@ -24,9 +24,19 @@ class FirstVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         downloadTask.mDelegate = self
+        //configViews()
         
         downloadData()
         
+    }
+    
+    func configViews(){
+        let recognizer = UISwipeGestureRecognizer(target: self, action: #selector(deleteRow(_:)))
+        recognizer.direction = .right
+        tableView.addGestureRecognizer(recognizer)
+    }
+    @objc func deleteRow(_ gesture:UISwipeGestureRecognizer){
+        print("kaydi..")
     }
     
     func configComp(){
@@ -75,6 +85,8 @@ extension FirstVC : UITableViewDelegate, UITableViewDataSource {
             self.present(secondVc, animated: true, completion: nil)
         }
     }
+    
+    
     
     
 }

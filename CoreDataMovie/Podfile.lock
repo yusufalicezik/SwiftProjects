@@ -1,0 +1,20 @@
+PODS:
+  - Pastel (0.5.1)
+  - UIWindowTransitions (0.2.0)
+
+DEPENDENCIES:
+  - Pastel
+  - UIWindowTransitions
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Pastel
+    - UIWindowTransitions
+
+SPEC CHECKSUMS:
+  Pastel: b3dd5b8d612dac06ae7c63c97c45c900829bc139
+  UIWindowTransitions: cb662e2ae9e2d1060fcdbe3eb3de9232bedb7612
+
+PODFILE CHECKSUM: 3feebff40a302372ed8e4721aa60324e041f451e
+
+COCOAPODS: 1.6.1
